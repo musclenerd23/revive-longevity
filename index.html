@@ -3,323 +3,375 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Revive Longevity | Premium Peptide Therapy</title>
-  <meta name="description" content="Science-backed peptide protocols personalized to your biology. Live longer. Perform better. Revive." />
+  <title>Revive Longevity | Personalized Wellness Protocols</title>
+  <meta name="description" content="Science-backed weight loss, hormone therapy, and longevity protocols personalized to you. Free consultation. Delivered to your door." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #0a0a0a;
-      --bg-2: #111111;
-      --bg-3: #1a1a1a;
-      --bg-4: #222222;
-      --hero-bg: #00071a;
-      --green: #00c37a;
-      --green-dim: rgba(0,195,122,0.12);
-      --blue: #84a9fa;
-      --cyan: #90dcf7;
-      --lavender: #c4b5fd;
-      --peach: #fba69e;
-      --soft-green: #99c374;
-      --pink: #fb6fec;
       --white: #ffffff;
-      --gray-1: #e5e7eb;
-      --gray-2: #9ca3af;
-      --gray-3: #6b7280;
-      --gray-4: #374151;
-      --border: rgba(255,255,255,0.07);
-      --border-2: rgba(255,255,255,0.12);
-      --card: #161616;
-      --card-light: #f9f9f9;
+      --bg: #f5f5f7;
+      --bg-2: #fafafa;
+      --surface: #ffffff;
+      --border: #e5e7eb;
+      --border-2: #d1d5db;
+      --text: #111111;
+      --text-2: #374151;
+      --text-3: #6b7280;
+      --green: #00a66c;
+      --green-light: #ecfdf5;
+      --green-mid: #d1fae5;
+      --blue: #2563eb;
+      --blue-light: #eff6ff;
+      --purple: #7c3aed;
+      --purple-light: #f5f3ff;
+      --orange: #ea580c;
+      --orange-light: #fff7ed;
+      --pink: #db2777;
+      --pink-light: #fdf2f8;
+      --teal: #0891b2;
+      --teal-light: #ecfeff;
+      --yellow: #d97706;
+      --yellow-light: #fffbeb;
       --radius: 16px;
       --radius-lg: 24px;
       --radius-pill: 999px;
-      --shadow: 0 4px 24px rgba(0,0,0,0.4);
-      --shadow-green: 0 0 40px rgba(0,195,122,0.15);
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow: 0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.06);
+      --transition: 0.22s ease;
     }
 
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      background: var(--bg);
-      color: var(--white);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--white);
+      color: var(--text);
       line-height: 1.6;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
-    img { display: block; max-width: 100%; }
 
     /* ── UTILS ── */
-    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
-    .fade-up { opacity: 0; transform: translateY(32px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
-    .tag {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 4px 12px; border-radius: var(--radius-pill);
-      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
-    }
     .btn {
       display: inline-flex; align-items: center; gap: 8px;
-      padding: 14px 28px; border-radius: var(--radius-pill);
-      font-size: 0.95rem; font-weight: 600; cursor: pointer;
-      transition: all 0.2s ease; border: none;
+      padding: 13px 26px; border-radius: var(--radius-pill);
+      font-size: 0.92rem; font-weight: 600; cursor: pointer;
+      transition: all var(--transition); border: none; white-space: nowrap;
     }
-    .btn-green { background: var(--green); color: #000; }
-    .btn-green:hover { background: #00e08a; transform: translateY(-2px); box-shadow: var(--shadow-green); }
-    .btn-ghost { background: transparent; color: var(--white); border: 1.5px solid var(--border-2); }
-    .btn-ghost:hover { border-color: var(--white); transform: translateY(-2px); }
+    .btn-green { background: var(--green); color: #fff; }
+    .btn-green:hover { background: #008f5d; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,166,108,0.3); }
+    .btn-outline { background: transparent; color: var(--text); border: 1.5px solid var(--border-2); }
+    .btn-outline:hover { border-color: var(--text); transform: translateY(-1px); }
+    .btn-white { background: #fff; color: var(--text); box-shadow: var(--shadow); }
+    .btn-white:hover { transform: translateY(-1px); box-shadow: var(--shadow-lg); }
+    .tag {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 4px 11px; border-radius: var(--radius-pill);
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+    }
+    .section-label {
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--green); margin-bottom: 12px;
+    }
 
     /* ── NAV ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      padding: 0 24px; height: 68px;
-      display: flex; align-items: center;
-      background: rgba(10,10,10,0.8);
-      backdrop-filter: blur(20px);
+      height: 64px; display: flex; align-items: center;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
-      transition: box-shadow 0.3s;
+      transition: box-shadow var(--transition);
     }
-    nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.5); }
-    .nav-inner {
-      max-width: 1180px; margin: 0 auto; width: 100%;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .nav-logo { font-size: 1.1rem; font-weight: 700; color: var(--white); letter-spacing: -0.02em; }
+    nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+    .nav-inner { max-width: 1140px; margin: 0 auto; padding: 0 24px; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-size: 1.05rem; font-weight: 800; color: var(--text); letter-spacing: -0.02em; }
     .nav-logo span { color: var(--green); }
-    .nav-links { display: flex; gap: 32px; }
-    .nav-links a { font-size: 0.9rem; color: var(--gray-2); font-weight: 500; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--white); }
-    .nav-cta { display: flex; align-items: center; gap: 12px; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { font-size: 0.88rem; color: var(--text-3); font-weight: 500; transition: color var(--transition); }
+    .nav-links a:hover { color: var(--text); }
+    .nav-right { display: flex; align-items: center; gap: 10px; }
+    .nav-login { font-size: 0.88rem; font-weight: 500; color: var(--text-2); padding: 8px 16px; }
+    .nav-login:hover { color: var(--text); }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
     .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
     .mobile-menu {
-      display: none; position: fixed; inset: 68px 0 0 0; background: var(--bg);
-      z-index: 99; flex-direction: column; align-items: center; justify-content: center; gap: 32px;
+      display: none; position: fixed; inset: 64px 0 0 0;
+      background: var(--white); z-index: 99;
+      flex-direction: column; align-items: center; justify-content: center;
+      gap: 28px; border-top: 1px solid var(--border);
     }
     .mobile-menu.open { display: flex; }
-    .mobile-menu a { font-size: 1.5rem; font-weight: 600; color: var(--gray-1); }
+    .mobile-menu a { font-size: 1.3rem; font-weight: 600; color: var(--text-2); }
     .mobile-menu a:hover { color: var(--green); }
 
     /* ── HERO ── */
     .hero {
-      min-height: 100vh;
-      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,100,255,0.12) 0%, transparent 70%), var(--hero-bg);
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align: center; padding: 120px 24px 80px;
+      padding: 140px 24px 100px;
+      text-align: center;
+      background: linear-gradient(180deg, #f0fdf8 0%, #ffffff 60%);
       position: relative; overflow: hidden;
     }
-    .hero::after {
-      content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 80px;
-      background: linear-gradient(to bottom, transparent, var(--bg));
-      pointer-events: none;
-    }
-    .hero-eyebrow {
+    .hero-badge {
       display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(132,169,250,0.1); border: 1px solid rgba(132,169,250,0.25);
+      background: var(--green-light); border: 1px solid var(--green-mid);
       padding: 6px 16px; border-radius: var(--radius-pill);
-      font-size: 0.8rem; font-weight: 600; color: var(--blue); letter-spacing: 0.06em;
-      text-transform: uppercase; margin-bottom: 28px;
+      font-size: 0.78rem; font-weight: 600; color: var(--green);
+      margin-bottom: 28px;
     }
-    .hero-eyebrow::before { content: '●'; font-size: 0.5rem; animation: pulse 2s infinite; }
-    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    .hero-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: blink 2s infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.35} }
     .hero h1 {
-      font-size: clamp(2.8rem, 6vw, 5.5rem);
-      font-weight: 800; line-height: 1.1; letter-spacing: -0.03em;
-      margin-bottom: 24px; max-width: 800px;
+      font-size: clamp(2.6rem, 5.5vw, 5rem);
+      font-weight: 800; line-height: 1.1; letter-spacing: -0.035em;
+      color: var(--text); margin-bottom: 24px; max-width: 780px; margin-left: auto; margin-right: auto;
     }
-    .hero h1 .grad {
-      background: linear-gradient(135deg, var(--blue) 0%, var(--green) 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
+    .hero h1 em { font-style: normal; color: var(--green); }
     .hero-sub {
-      font-size: clamp(1rem, 2vw, 1.2rem); color: var(--gray-2);
-      max-width: 560px; margin: 0 auto 40px; line-height: 1.7;
+      font-size: clamp(1rem, 2vw, 1.18rem); color: var(--text-3);
+      max-width: 540px; margin: 0 auto 40px; line-height: 1.75; font-weight: 400;
     }
-    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 56px; }
-    .trust-strip {
-      display: flex; gap: 32px; flex-wrap: wrap; justify-content: center;
-      font-size: 0.85rem; color: var(--gray-2); font-weight: 500;
+    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 60px; }
+    .hero-trust {
+      display: flex; gap: 32px; justify-content: center; flex-wrap: wrap;
+      font-size: 0.84rem; color: var(--text-3); font-weight: 500;
     }
-    .trust-strip span { display: flex; align-items: center; gap: 6px; }
-    .trust-strip .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+    .hero-trust span { display: flex; align-items: center; gap: 7px; }
+    .check { width: 18px; height: 18px; background: var(--green-light); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: var(--green); font-size: 0.7rem; font-weight: 800; flex-shrink: 0; }
+    .hero-stats {
+      display: flex; gap: 0; justify-content: center;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow);
+      max-width: 640px; margin: 48px auto 0; overflow: hidden;
+    }
+    .hero-stat { flex: 1; padding: 24px 16px; text-align: center; border-right: 1px solid var(--border); }
+    .hero-stat:last-child { border-right: none; }
+    .hero-stat-num { font-size: 1.6rem; font-weight: 800; color: var(--text); letter-spacing: -0.03em; }
+    .hero-stat-label { font-size: 0.78rem; color: var(--text-3); font-weight: 500; margin-top: 2px; }
 
     /* ── MARQUEE ── */
-    .marquee-section { padding: 40px 0; overflow: hidden; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .marquee-label { text-align: center; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-3); margin-bottom: 20px; }
-    .marquee-track { display: flex; gap: 12px; width: max-content; animation: marquee 28s linear infinite; }
+    .marquee-wrap { padding: 28px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; background: var(--bg-2); }
+    .marquee-track { display: flex; gap: 10px; width: max-content; animation: marquee 30s linear infinite; }
     .marquee-track:hover { animation-play-state: paused; }
     @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-    .pill {
-      padding: 8px 20px; border-radius: var(--radius-pill); font-size: 0.82rem; font-weight: 600;
+    .m-pill {
+      padding: 7px 18px; border-radius: var(--radius-pill); font-size: 0.8rem; font-weight: 600;
       white-space: nowrap; border: 1px solid transparent; cursor: default;
-      transition: transform 0.2s;
     }
-    .pill:hover { transform: scale(1.04); }
-    .pill-blue { background: rgba(132,169,250,0.12); color: var(--blue); border-color: rgba(132,169,250,0.25); }
-    .pill-cyan { background: rgba(144,220,247,0.12); color: var(--cyan); border-color: rgba(144,220,247,0.25); }
-    .pill-green { background: rgba(153,195,116,0.12); color: var(--soft-green); border-color: rgba(153,195,116,0.25); }
-    .pill-lavender { background: rgba(196,181,253,0.12); color: var(--lavender); border-color: rgba(196,181,253,0.25); }
-    .pill-peach { background: rgba(251,166,158,0.12); color: var(--peach); border-color: rgba(251,166,158,0.25); }
-    .pill-pink { background: rgba(251,111,236,0.12); color: var(--pink); border-color: rgba(251,111,236,0.25); }
+    .mp-green { background: var(--green-light); color: var(--green); border-color: var(--green-mid); }
+    .mp-blue { background: var(--blue-light); color: var(--blue); border-color: #bfdbfe; }
+    .mp-purple { background: var(--purple-light); color: var(--purple); border-color: #ddd6fe; }
+    .mp-orange { background: var(--orange-light); color: var(--orange); border-color: #fed7aa; }
+    .mp-pink { background: var(--pink-light); color: var(--pink); border-color: #fbcfe8; }
+    .mp-teal { background: var(--teal-light); color: var(--teal); border-color: #a5f3fc; }
+    .mp-yellow { background: var(--yellow-light); color: var(--yellow); border-color: #fde68a; }
 
-    /* ── SECTION HEADER ── */
+    /* ── SECTION SHARED ── */
     .section-header { text-align: center; margin-bottom: 56px; }
     .section-header h2 {
-      font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 16px;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem); font-weight: 800;
+      letter-spacing: -0.03em; color: var(--text); margin-bottom: 14px;
     }
-    .section-header p { font-size: 1.05rem; color: var(--gray-2); max-width: 560px; margin: 0 auto; }
-    .accent-line { display: inline-block; width: 48px; height: 3px; background: var(--green); border-radius: 2px; margin: 16px auto 0; }
+    .section-header p { font-size: 1rem; color: var(--text-3); max-width: 500px; margin: 0 auto; line-height: 1.7; }
 
-    /* ── PEPTIDES ── */
-    .peptides-section { padding: 100px 0; background: var(--bg-2); }
-    .peptides-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .peptide-card {
-      background: var(--card-light); border-radius: var(--radius-lg); overflow: hidden;
-      transition: transform 0.25s, box-shadow 0.25s; position: relative;
+    /* ── PRODUCTS ── */
+    .products-section { padding: 96px 0; background: var(--white); }
+    .products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .product-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+      cursor: pointer;
     }
-    .peptide-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-    .card-stripe { height: 4px; width: 100%; }
-    .card-body { padding: 28px; }
-    .card-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 12px; }
-    .card-name { font-size: 1.25rem; font-weight: 700; color: #111; letter-spacing: -0.02em; }
-    .card-tagline { font-size: 0.88rem; color: #555; font-style: italic; margin-bottom: 14px; }
-    .card-desc { font-size: 0.9rem; color: #444; line-height: 1.65; margin-bottom: 18px; }
-    .card-benefits { margin-bottom: 18px; }
-    .card-benefits li {
-      font-size: 0.88rem; color: #333; padding: 4px 0 4px 20px;
-      position: relative;
+    .product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--border-2); }
+    .card-header { padding: 28px 24px 20px; }
+    .card-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; margin-bottom: 16px;
     }
-    .card-benefits li::before { content: '✓'; position: absolute; left: 0; font-weight: 700; }
-    .card-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      border-top: 1px solid #e5e7eb; padding-top: 16px; margin-top: 4px;
+    .card-name { font-size: 1.15rem; font-weight: 700; color: var(--text); margin-bottom: 6px; letter-spacing: -0.02em; }
+    .card-category { font-size: 0.78rem; font-weight: 600; margin-bottom: 12px; }
+    .card-desc { font-size: 0.875rem; color: var(--text-3); line-height: 1.65; }
+    .card-divider { height: 1px; background: var(--border); margin: 0 24px; }
+    .card-footer { padding: 16px 24px 20px; display: flex; align-items: center; justify-content: space-between; }
+    .card-price { font-size: 0.88rem; font-weight: 700; color: var(--text); }
+    .card-price span { font-size: 0.75rem; font-weight: 400; color: var(--text-3); }
+    .card-link { font-size: 0.82rem; font-weight: 600; display: flex; align-items: center; gap: 4px; transition: gap var(--transition); }
+    .card-link:hover { gap: 8px; }
+
+    /* Product color themes */
+    .theme-green .card-icon { background: var(--green-light); }
+    .theme-green .card-category { color: var(--green); }
+    .theme-green .card-link { color: var(--green); }
+    .theme-green:hover { border-color: #a7f3d0; }
+    .theme-blue .card-icon { background: var(--blue-light); }
+    .theme-blue .card-category { color: var(--blue); }
+    .theme-blue .card-link { color: var(--blue); }
+    .theme-blue:hover { border-color: #bfdbfe; }
+    .theme-purple .card-icon { background: var(--purple-light); }
+    .theme-purple .card-category { color: var(--purple); }
+    .theme-purple .card-link { color: var(--purple); }
+    .theme-purple:hover { border-color: #ddd6fe; }
+    .theme-orange .card-icon { background: var(--orange-light); }
+    .theme-orange .card-category { color: var(--orange); }
+    .theme-orange .card-link { color: var(--orange); }
+    .theme-orange:hover { border-color: #fed7aa; }
+    .theme-pink .card-icon { background: var(--pink-light); }
+    .theme-pink .card-category { color: var(--pink); }
+    .theme-pink .card-link { color: var(--pink); }
+    .theme-pink:hover { border-color: #fbcfe8; }
+    .theme-teal .card-icon { background: var(--teal-light); }
+    .theme-teal .card-category { color: var(--teal); }
+    .theme-teal .card-link { color: var(--teal); }
+    .theme-teal:hover { border-color: #a5f3fc; }
+    .theme-yellow .card-icon { background: var(--yellow-light); }
+    .theme-yellow .card-category { color: var(--yellow); }
+    .theme-yellow .card-link { color: var(--yellow); }
+    .theme-yellow:hover { border-color: #fde68a; }
+
+    /* ── WHY REVIVE ── */
+    .why-section { padding: 96px 0; background: var(--bg); }
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .why-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 36px 28px;
+      transition: box-shadow var(--transition);
     }
-    .card-ideal { font-size: 0.8rem; color: #777; }
-    .card-ideal strong { color: #444; }
-    .card-price { font-size: 0.88rem; font-weight: 700; color: #111; }
+    .why-card:hover { box-shadow: var(--shadow); }
+    .why-icon { font-size: 2rem; margin-bottom: 20px; }
+    .why-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.02em; }
+    .why-card p { font-size: 0.9rem; color: var(--text-3); line-height: 1.7; }
 
     /* ── STATS ── */
     .stats-section {
       padding: 80px 0;
-      background: linear-gradient(135deg, #00071a 0%, #0a0a0a 100%);
-      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      background: var(--green);
     }
     .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
-    .stat-num {
-      font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 800; letter-spacing: -0.04em;
-      background: linear-gradient(135deg, var(--blue), var(--green));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-      margin-bottom: 8px;
-    }
-    .stat-label { font-size: 0.9rem; color: var(--gray-2); font-weight: 500; }
+    .stat-num { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: #fff; letter-spacing: -0.04em; margin-bottom: 6px; }
+    .stat-label { font-size: 0.88rem; color: rgba(255,255,255,0.75); font-weight: 500; }
 
     /* ── HOW IT WORKS ── */
-    .how-section { padding: 100px 0; background: var(--bg); }
-    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; position: relative; }
-    .steps-grid::before {
-      content: ''; position: absolute; top: 36px; left: calc(16.66% + 16px); right: calc(16.66% + 16px);
-      height: 1px; border-top: 2px dashed rgba(255,255,255,0.1);
+    .how-section { padding: 96px 0; background: var(--white); }
+    .steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .step {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 36px 28px; position: relative;
+      transition: box-shadow var(--transition);
     }
-    .step { text-align: center; padding: 0 16px; }
+    .step:hover { box-shadow: var(--shadow); }
     .step-num {
-      width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 24px;
+      width: 48px; height: 48px; border-radius: 14px;
+      background: var(--green); color: #fff;
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.6rem; font-weight: 800; color: #000;
-      background: linear-gradient(135deg, var(--blue), var(--green));
-      position: relative; z-index: 1;
+      font-size: 1.2rem; font-weight: 800; margin-bottom: 20px;
     }
-    .step h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; }
-    .step p { font-size: 0.92rem; color: var(--gray-2); line-height: 1.65; }
-    .how-cta { text-align: center; margin-top: 56px; }
+    .step h3 { font-size: 1.08rem; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.02em; }
+    .step p { font-size: 0.9rem; color: var(--text-3); line-height: 1.7; }
+    .how-cta { text-align: center; margin-top: 48px; }
 
     /* ── TESTIMONIALS ── */
-    .testimonials-section { padding: 100px 0; background: var(--bg-2); }
-    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .testi-section { padding: 96px 0; background: var(--bg); }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .testi-card {
-      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg);
-      padding: 32px; transition: border-color 0.2s, transform 0.2s;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 32px;
+      transition: box-shadow var(--transition);
     }
-    .testi-card:hover { border-color: var(--border-2); transform: translateY(-3px); }
-    .testi-stars { color: #f59e0b; font-size: 1rem; letter-spacing: 2px; margin-bottom: 20px; }
-    .testi-quote { font-size: 0.95rem; color: var(--gray-1); line-height: 1.75; margin-bottom: 28px; font-style: italic; }
+    .testi-card:hover { box-shadow: var(--shadow); }
+    .testi-stars { color: #f59e0b; font-size: 0.95rem; letter-spacing: 2px; margin-bottom: 18px; }
+    .testi-quote { font-size: 0.93rem; color: var(--text-2); line-height: 1.75; margin-bottom: 24px; font-style: italic; }
     .testi-author { display: flex; align-items: center; gap: 12px; }
     .testi-avatar {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--blue), var(--green));
+      width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
+      background: var(--green); color: #fff;
       display: flex; align-items: center; justify-content: center;
-      font-size: 1rem; font-weight: 700; color: #000; flex-shrink: 0;
+      font-size: 0.95rem; font-weight: 700;
     }
-    .testi-name { font-size: 0.9rem; font-weight: 600; }
-    .testi-loc { font-size: 0.8rem; color: var(--gray-3); }
+    .testi-name { font-size: 0.88rem; font-weight: 600; color: var(--text); }
+    .testi-meta { font-size: 0.78rem; color: var(--text-3); margin-top: 2px; }
 
     /* ── FAQ ── */
-    .faq-section { padding: 100px 0; background: var(--bg); }
-    .faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
-    .faq-item { background: var(--bg-3); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+    .faq-section { padding: 96px 0; background: var(--white); }
+    .faq-wrap { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
     .faq-q {
       width: 100%; display: flex; align-items: center; justify-content: space-between;
-      padding: 22px 24px; background: none; border: none; color: var(--white);
-      font-size: 0.97rem; font-weight: 600; cursor: pointer; text-align: left; gap: 16px;
-      transition: background 0.2s;
+      padding: 20px 22px; background: var(--white); border: none; color: var(--text);
+      font-size: 0.95rem; font-weight: 600; cursor: pointer; text-align: left; gap: 16px;
+      transition: background var(--transition);
     }
-    .faq-q:hover { background: rgba(255,255,255,0.03); }
-    .faq-chevron { width: 20px; height: 20px; flex-shrink: 0; transition: transform 0.3s; color: var(--gray-2); }
+    .faq-q:hover { background: var(--bg); }
+    .faq-chevron { width: 18px; height: 18px; flex-shrink: 0; color: var(--text-3); transition: transform 0.3s; }
     .faq-item.open .faq-chevron { transform: rotate(180deg); }
-    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; }
+    .faq-item.open .faq-q { background: var(--bg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; background: var(--bg); }
     .faq-item.open .faq-a { max-height: 300px; }
-    .faq-a p { padding: 0 24px 22px; font-size: 0.92rem; color: var(--gray-2); line-height: 1.75; }
+    .faq-a p { padding: 0 22px 20px; font-size: 0.9rem; color: var(--text-3); line-height: 1.75; }
 
     /* ── CTA BANNER ── */
-    .cta-banner {
+    .cta-section {
       padding: 100px 24px; text-align: center;
-      background: radial-gradient(ellipse 80% 100% at 50% 100%, rgba(0,100,255,0.12) 0%, transparent 70%), var(--hero-bg);
+      background: linear-gradient(135deg, #f0fdf8 0%, #ecfdf5 100%);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
     }
-    .cta-banner h2 {
-      font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 16px;
+    .cta-section h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800;
+      letter-spacing: -0.03em; margin-bottom: 16px; color: var(--text);
     }
-    .cta-banner p { color: var(--gray-2); font-size: 1.05rem; margin-bottom: 36px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .cta-section p { font-size: 1rem; color: var(--text-3); margin-bottom: 36px; max-width: 440px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
     /* ── FOOTER ── */
-    footer {
-      background: #060606; border-top: 1px solid var(--border);
-      padding: 64px 24px 32px;
+    footer { background: var(--text); padding: 64px 0 0; color: rgba(255,255,255,0.85); }
+    .footer-grid { display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .f-brand { }
+    .f-logo { font-size: 1.1rem; font-weight: 800; color: #fff; margin-bottom: 12px; letter-spacing: -0.02em; }
+    .f-logo span { color: var(--green); }
+    .f-brand p { font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.7; max-width: 240px; }
+    .f-col h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+    .f-col a { display: block; font-size: 0.875rem; color: rgba(255,255,255,0.65); margin-bottom: 10px; transition: color var(--transition); }
+    .f-col a:hover { color: #fff; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 20px 0; display: flex; align-items: center;
+      justify-content: space-between; flex-wrap: wrap; gap: 12px;
     }
-    .footer-inner { max-width: 1180px; margin: 0 auto; }
-    .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-    .footer-brand .logo { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; }
-    .footer-brand .logo span { color: var(--green); }
-    .footer-brand p { font-size: 0.88rem; color: var(--gray-3); line-height: 1.7; max-width: 260px; }
-    .footer-col h4 { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-3); margin-bottom: 16px; }
-    .footer-col a { display: block; font-size: 0.88rem; color: var(--gray-2); margin-bottom: 10px; transition: color 0.2s; }
-    .footer-col a:hover { color: var(--white); }
-    .footer-bottom { border-top: 1px solid var(--border); padding-top: 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-    .footer-bottom p { font-size: 0.8rem; color: var(--gray-3); }
-    .footer-disclaimer { font-size: 0.75rem; color: var(--gray-4); max-width: 1180px; margin: 16px auto 0; text-align: center; padding: 0 24px; }
+    .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+    .footer-disclaimer { padding: 20px 0; text-align: center; font-size: 0.75rem; color: rgba(255,255,255,0.3); line-height: 1.6; border-top: 1px solid rgba(255,255,255,0.06); }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      .nav-links, .nav-cta .btn { display: none; }
+    @media (max-width: 1024px) {
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-login { display: none; }
       .hamburger { display: flex; }
-      .peptides-grid { grid-template-columns: 1fr; }
+      .why-grid, .steps-row, .testi-grid { grid-template-columns: 1fr; }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .testimonials-grid { grid-template-columns: 1fr; }
-      .steps-grid { grid-template-columns: 1fr; }
-      .steps-grid::before { display: none; }
-      .footer-top { grid-template-columns: 1fr 1fr; }
+      .hero-stats { flex-direction: column; border-radius: var(--radius); }
+      .hero-stat { border-right: none; border-bottom: 1px solid var(--border); }
+      .hero-stat:last-child { border-bottom: none; }
     }
     @media (max-width: 560px) {
-      .hero h1 { font-size: 2.4rem; }
+      .products-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2.2rem; }
       .hero-btns { flex-direction: column; align-items: center; }
-      .trust-strip { gap: 16px; }
-      .stats-grid { grid-template-columns: 1fr 1fr; }
-      .footer-top { grid-template-columns: 1fr; }
+      .hero-trust { flex-direction: column; align-items: center; gap: 12px; }
+      .footer-grid { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; text-align: center; }
     }
   </style>
@@ -329,16 +381,17 @@
 <!-- NAV -->
 <nav id="nav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo">Revive <span>Longevity</span></a>
+    <div class="nav-logo">Revive <span>Longevity</span></div>
     <ul class="nav-links">
-      <li><a href="#peptides">Peptides</a></li>
+      <li><a href="#products">Treatments</a></li>
       <li><a href="#how">How It Works</a></li>
-      <li><a href="#science">Science</a></li>
+      <li><a href="#why">Why Revive</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
-    <div class="nav-cta">
-      <a href="#peptides" class="btn btn-green" style="padding:10px 22px;font-size:0.88rem;">Get Started</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+    <div class="nav-right">
+      <a class="nav-login" href="#">Login</a>
+      <a href="#products" class="btn btn-green" style="padding:10px 20px;font-size:0.85rem;">Get Started</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -347,296 +400,253 @@
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobile-menu">
-  <a href="#peptides" class="mob-link">Peptides</a>
+  <a href="#products" class="mob-link">Treatments</a>
   <a href="#how" class="mob-link">How It Works</a>
-  <a href="#science" class="mob-link">Science</a>
+  <a href="#why" class="mob-link">Why Revive</a>
   <a href="#faq" class="mob-link">FAQ</a>
-  <a href="#peptides" class="btn btn-green">Get Started</a>
+  <a href="#products" class="btn btn-green">Get Started</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-eyebrow">● Science-Backed Longevity Protocols</div>
-  <h1 class="fade-up">
-    Live Longer.<br/><span class="grad">Perform Better.</span><br/>Revive.
-  </h1>
-  <p class="hero-sub fade-up">Science-backed peptide protocols personalized to your biology. The future of longevity medicine — delivered to your door.</p>
-  <div class="hero-btns fade-up">
-    <a href="#peptides" class="btn btn-green">Start Your Protocol →</a>
-    <a href="#how" class="btn btn-ghost">How It Works</a>
+  <div class="hero-badge">
+    <span class="dot"></span> Personalized Wellness Protocols
   </div>
-  <div class="trust-strip fade-up">
-    <span><span class="dot"></span> 2,400+ Members</span>
-    <span><span class="dot"></span> 97% Satisfaction</span>
-    <span><span class="dot"></span> Free Consultation</span>
-    <span><span class="dot"></span> Discreet Delivery</span>
-    <span><span class="dot"></span> No Insurance Required</span>
+  <h1 class="fade-up">
+    Wellness Tailored<br/>to <em>You</em>.
+  </h1>
+  <p class="hero-sub fade-up">
+    Science-backed weight loss, hormone therapy, and longevity protocols — designed by licensed providers, delivered to your door.
+  </p>
+  <div class="hero-btns fade-up">
+    <a href="#products" class="btn btn-green">Find My Treatment →</a>
+    <a href="#how" class="btn btn-outline">How It Works</a>
+  </div>
+  <div class="hero-trust fade-up">
+    <span><span class="check">✓</span> Free Consultation</span>
+    <span><span class="check">✓</span> No Insurance Required</span>
+    <span><span class="check">✓</span> Discreet Delivery</span>
+    <span><span class="check">✓</span> Licensed Providers</span>
+  </div>
+  <div class="hero-stats fade-up">
+    <div class="hero-stat">
+      <div class="hero-stat-num">2,400+</div>
+      <div class="hero-stat-label">Members</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">97%</div>
+      <div class="hero-stat-label">Satisfaction</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">48h</div>
+      <div class="hero-stat-label">Avg. Delivery</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">4.9 ★</div>
+      <div class="hero-stat-label">1,800+ Reviews</div>
+    </div>
   </div>
 </section>
 
 <!-- MARQUEE -->
-<div class="marquee-section">
-  <div class="marquee-label">Explore by Goal</div>
+<div class="marquee-wrap">
   <div class="marquee-track" id="marquee">
-    <span class="pill pill-blue">🔵 Recovery</span>
-    <span class="pill pill-lavender">💜 Anti-Aging</span>
-    <span class="pill pill-green">🟢 Performance</span>
-    <span class="pill pill-cyan">🩵 Cellular Health</span>
-    <span class="pill pill-blue">🧠 Cognitive</span>
-    <span class="pill pill-peach">🍑 Hormones</span>
-    <span class="pill pill-green">💚 Longevity</span>
-    <span class="pill pill-pink">✨ Skin & Healing</span>
-    <span class="pill pill-blue">🔵 Recovery</span>
-    <span class="pill pill-lavender">💜 Anti-Aging</span>
-    <span class="pill pill-green">🟢 Performance</span>
-    <span class="pill pill-cyan">🩵 Cellular Health</span>
-    <span class="pill pill-blue">🧠 Cognitive</span>
-    <span class="pill pill-peach">🍑 Hormones</span>
-    <span class="pill pill-green">💚 Longevity</span>
-    <span class="pill pill-pink">✨ Skin & Healing</span>
+    <span class="m-pill mp-green">💊 Weight Loss</span>
+    <span class="m-pill mp-purple">⚡ Hormone Therapy</span>
+    <span class="m-pill mp-blue">🧬 Longevity</span>
+    <span class="m-pill mp-orange">🔥 Metabolism</span>
+    <span class="m-pill mp-teal">✨ Anti-Aging</span>
+    <span class="m-pill mp-pink">🌸 HRT for Women</span>
+    <span class="m-pill mp-yellow">⚡ Energy & Vitality</span>
+    <span class="m-pill mp-green">💉 Injectable Therapy</span>
+    <span class="m-pill mp-blue">🧠 Cognitive Health</span>
+    <span class="m-pill mp-purple">💪 Muscle & Strength</span>
+    <span class="m-pill mp-green">💊 Weight Loss</span>
+    <span class="m-pill mp-purple">⚡ Hormone Therapy</span>
+    <span class="m-pill mp-blue">🧬 Longevity</span>
+    <span class="m-pill mp-orange">🔥 Metabolism</span>
+    <span class="m-pill mp-teal">✨ Anti-Aging</span>
+    <span class="m-pill mp-pink">🌸 HRT for Women</span>
+    <span class="m-pill mp-yellow">⚡ Energy & Vitality</span>
+    <span class="m-pill mp-green">💉 Injectable Therapy</span>
+    <span class="m-pill mp-blue">🧠 Cognitive Health</span>
+    <span class="m-pill mp-purple">💪 Muscle & Strength</span>
   </div>
 </div>
 
-<!-- PEPTIDES -->
-<section class="peptides-section" id="peptides">
+<!-- PRODUCTS -->
+<section class="products-section" id="products">
   <div class="container">
     <div class="section-header fade-up">
-      <h2>Our Peptide Protocols</h2>
-      <div class="accent-line"></div>
-      <p>The most researched peptides for longevity, performance, and recovery — backed by science, personalized to you.</p>
+      <div class="section-label">Our Treatments</div>
+      <h2>Personalized protocols.<br/>Real results.</h2>
+      <p>All treatments are prescribed by licensed medical providers and shipped from FDA-registered pharmacies.</p>
     </div>
-    <div class="peptides-grid">
+    <div class="products-grid">
 
-      <!-- BPC-157 -->
-      <div class="peptide-card fade-up">
-        <div class="card-stripe" style="background:var(--blue)"></div>
-        <div class="card-body">
-          <div class="card-top">
-            <div class="card-name">BPC-157</div>
-            <span class="tag" style="background:rgba(132,169,250,0.12);color:var(--blue);border:1px solid rgba(132,169,250,0.25)">Recovery</span>
-          </div>
-          <div class="card-tagline">The Body's Master Healer</div>
-          <div class="card-desc">Body Protection Compound derived from a gastric protein. BPC-157 accelerates healing across virtually every tissue in the body — tendons, muscles, gut, and nerves — making it one of the most versatile peptides in existence.</div>
-          <ul class="card-benefits" style="--check:var(--blue)">
-            <li style="--check:var(--blue)">Accelerates tendon & ligament repair</li>
-            <li>Reduces systemic inflammation</li>
-            <li>Heals gut lining & IBS symptoms</li>
-            <li>Promotes angiogenesis (new blood vessels)</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-ideal"><strong>Ideal for:</strong> Athletes, injury recovery, gut issues</div>
-            <div class="card-price" style="color:var(--blue)">From $149/mo</div>
-          </div>
+      <!-- Semaglutide -->
+      <div class="product-card theme-green fade-up">
+        <div class="card-header">
+          <div class="card-icon">💉</div>
+          <div class="card-name">Semaglutide</div>
+          <div class="card-category">Weight Loss · GLP-1</div>
+          <div class="card-desc">Once-weekly injectable that mimics gut hormones to regulate appetite, blood sugar, and support sustained, meaningful weight loss. The active ingredient in Ozempic® and Wegovy®.</div>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-footer">
+          <div class="card-price">From $175<span>/mo</span></div>
+          <a href="#" class="card-link" style="color:var(--green)">Learn more →</a>
         </div>
       </div>
 
-      <!-- TB-500 -->
-      <div class="peptide-card fade-up">
-        <div class="card-stripe" style="background:var(--cyan)"></div>
-        <div class="card-body">
-          <div class="card-top">
-            <div class="card-name">TB-500</div>
-            <span class="tag" style="background:rgba(144,220,247,0.12);color:var(--cyan);border:1px solid rgba(144,220,247,0.25)">Recovery</span>
-          </div>
-          <div class="card-tagline">Systemic Tissue Regeneration</div>
-          <div class="card-desc">Synthetic version of Thymosin Beta-4, a naturally occurring protein that orchestrates cellular migration and differentiation. Works synergistically with BPC-157 for comprehensive healing.</div>
-          <ul class="card-benefits">
-            <li>Promotes muscle fiber regeneration</li>
-            <li>Reduces inflammation & chronic pain</li>
-            <li>Improves flexibility & mobility</li>
-            <li>Speeds wound and surgical healing</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-ideal"><strong>Ideal for:</strong> Post-surgery, chronic injuries, athletes</div>
-            <div class="card-price" style="color:var(--cyan)">From $169/mo</div>
-          </div>
+      <!-- Tirzepatide -->
+      <div class="product-card theme-blue fade-up">
+        <div class="card-header">
+          <div class="card-icon">🔬</div>
+          <div class="card-name">Tirzepatide</div>
+          <div class="card-category">Weight Loss · GIP/GLP-1</div>
+          <div class="card-desc">The next generation dual GIP/GLP-1 receptor agonist. Clinical trials show up to 22.5% body weight reduction — the most effective FDA-approved weight loss medication available. Active ingredient in Mounjaro® and Zepbound®.</div>
         </div>
-      </div>
-
-      <!-- Epithalon -->
-      <div class="peptide-card fade-up">
-        <div class="card-stripe" style="background:var(--lavender)"></div>
-        <div class="card-body">
-          <div class="card-top">
-            <div class="card-name">Epithalon</div>
-            <span class="tag" style="background:rgba(196,181,253,0.12);color:var(--lavender);border:1px solid rgba(196,181,253,0.25)">Anti-Aging</span>
-          </div>
-          <div class="card-tagline">The Telomere Protector</div>
-          <div class="card-desc">A tetrapeptide that regulates the pineal gland and activates telomerase — the enzyme responsible for maintaining telomere length. One of the most studied anti-aging compounds in existence, with data showing extended lifespan in animal models.</div>
-          <ul class="card-benefits">
-            <li>Supports telomere length & cellular youth</li>
-            <li>Enhances melatonin & circadian rhythm</li>
-            <li>Improves sleep quality & depth</li>
-            <li>Cellular regeneration & longevity</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-ideal"><strong>Ideal for:</strong> Longevity seekers, sleep issues, aging adults</div>
-            <div class="card-price" style="color:var(--lavender)">From $199/mo</div>
-          </div>
+        <div class="card-divider"></div>
+        <div class="card-footer">
+          <div class="card-price">From $199<span>/mo</span></div>
+          <a href="#" class="card-link" style="color:var(--blue)">Learn more →</a>
         </div>
       </div>
 
       <!-- Sermorelin -->
-      <div class="peptide-card fade-up">
-        <div class="card-stripe" style="background:var(--peach)"></div>
-        <div class="card-body">
-          <div class="card-top">
-            <div class="card-name">Sermorelin</div>
-            <span class="tag" style="background:rgba(251,166,158,0.12);color:var(--peach);border:1px solid rgba(251,166,158,0.25)">Hormones</span>
-          </div>
-          <div class="card-tagline">Natural Growth Hormone Optimization</div>
-          <div class="card-desc">A GHRH analog that stimulates the pituitary gland to produce and release growth hormone naturally — a safer, more physiological alternative to direct HGH therapy with fewer side effects.</div>
-          <ul class="card-benefits">
-            <li>Increases natural GH production</li>
-            <li>Builds lean muscle mass</li>
-            <li>Improves sleep quality & recovery</li>
-            <li>Enhances bone density</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-ideal"><strong>Ideal for:</strong> Hormone decline, muscle loss, poor recovery</div>
-            <div class="card-price" style="color:var(--peach)">From $175/mo</div>
-          </div>
+      <div class="product-card theme-purple fade-up">
+        <div class="card-header">
+          <div class="card-icon">⚡</div>
+          <div class="card-name">Sermorelin</div>
+          <div class="card-category">Anti-Aging · Growth Hormone</div>
+          <div class="card-desc">A GHRH analog that stimulates your pituitary gland to produce natural growth hormone — improving body composition, sleep quality, recovery, and energy levels as you age.</div>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-footer">
+          <div class="card-price">From $175<span>/mo</span></div>
+          <a href="#" class="card-link" style="color:var(--purple)">Learn more →</a>
         </div>
       </div>
 
-      <!-- CJC-1295 -->
-      <div class="peptide-card fade-up">
-        <div class="card-stripe" style="background:var(--soft-green)"></div>
-        <div class="card-body">
-          <div class="card-top">
-            <div class="card-name">CJC-1295</div>
-            <span class="tag" style="background:rgba(153,195,116,0.12);color:var(--soft-green);border:1px solid rgba(153,195,116,0.25)">Performance</span>
-          </div>
-          <div class="card-tagline">Sustained GH Release for Peak Performance</div>
-          <div class="card-desc">A long-acting GHRH analog that dramatically extends the half-life of growth hormone release. Most effective when stacked with Ipamorelin for amplified anabolic and fat-burning effects.</div>
-          <ul class="card-benefits">
-            <li>Sustained, pulsatile GH release</li>
-            <li>Enhanced protein synthesis</li>
-            <li>Accelerated fat metabolism</li>
-            <li>Superior recovery & tissue repair</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-ideal"><strong>Ideal for:</strong> Body composition, performance, anti-aging</div>
-            <div class="card-price" style="color:var(--soft-green)">From $185/mo</div>
-          </div>
+      <!-- NAD+ -->
+      <div class="product-card theme-yellow fade-up">
+        <div class="card-header">
+          <div class="card-icon">🔋</div>
+          <div class="card-name">NAD+</div>
+          <div class="card-category">Energy · Longevity</div>
+          <div class="card-desc">Nicotinamide Adenine Dinucleotide — a critical coenzyme that powers every cell in your body. Levels decline sharply with age. NAD+ therapy restores cellular energy, cognitive sharpness, and DNA repair capacity.</div>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-footer">
+          <div class="card-price">From $149<span>/mo</span></div>
+          <a href="#" class="card-link" style="color:var(--yellow)">Learn more →</a>
         </div>
       </div>
 
-      <!-- Ipamorelin -->
-      <div class="peptide-card fade-up">
-        <div class="card-stripe" style="background:var(--soft-green)"></div>
-        <div class="card-body">
-          <div class="card-top">
-            <div class="card-name">Ipamorelin</div>
-            <span class="tag" style="background:rgba(153,195,116,0.12);color:var(--soft-green);border:1px solid rgba(153,195,116,0.25)">Performance</span>
-          </div>
-          <div class="card-tagline">The Cleanest GH Secretagogue</div>
-          <div class="card-desc">A selective growth hormone secretagogue that triggers GH release without affecting cortisol or prolactin — delivering the benefits of elevated GH with one of the cleanest side-effect profiles in the class.</div>
-          <ul class="card-benefits">
-            <li>Selective GH release, no cortisol spike</li>
-            <li>Promotes lean muscle growth</li>
-            <li>Supports fat loss & metabolism</li>
-            <li>Improves bone density & sleep</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-ideal"><strong>Ideal for:</strong> Body recomposition, metabolic health, athletes</div>
-            <div class="card-price" style="color:var(--soft-green)">From $165/mo</div>
-          </div>
+      <!-- Glutathione -->
+      <div class="product-card theme-teal fade-up">
+        <div class="card-header">
+          <div class="card-icon">✨</div>
+          <div class="card-name">Glutathione</div>
+          <div class="card-category">Detox · Skin · Immunity</div>
+          <div class="card-desc">The body's master antioxidant — produced naturally but depleted by stress, aging, and toxins. Glutathione therapy supports detoxification, radiant skin, immune function, and cellular protection from oxidative damage.</div>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-footer">
+          <div class="card-price">From $129<span>/mo</span></div>
+          <a href="#" class="card-link" style="color:var(--teal)">Learn more →</a>
         </div>
       </div>
 
-      <!-- GHK-Cu -->
-      <div class="peptide-card fade-up">
-        <div class="card-stripe" style="background:var(--lavender)"></div>
-        <div class="card-body">
-          <div class="card-top">
-            <div class="card-name">GHK-Cu</div>
-            <span class="tag" style="background:rgba(196,181,253,0.12);color:var(--lavender);border:1px solid rgba(196,181,253,0.25)">Anti-Aging</span>
-          </div>
-          <div class="card-tagline">Copper Peptide for Cellular Renewal</div>
-          <div class="card-desc">A naturally occurring copper-binding peptide found in human plasma, urine, and saliva. Concentrations decline sharply with age. Known for its profound skin regeneration effects and systemic anti-inflammatory properties.</div>
-          <ul class="card-benefits">
-            <li>Stimulates collagen & elastin production</li>
-            <li>Reduces oxidative stress & inflammation</li>
-            <li>Promotes skin regeneration & elasticity</li>
-            <li>Supports hair follicle health</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-ideal"><strong>Ideal for:</strong> Skin rejuvenation, hair loss, wound healing</div>
-            <div class="card-price" style="color:var(--lavender)">From $129/mo</div>
-          </div>
+      <!-- TRT -->
+      <div class="product-card theme-orange fade-up">
+        <div class="card-header">
+          <div class="card-icon">💪</div>
+          <div class="card-name">TRT</div>
+          <div class="card-category">Men's Health · Testosterone</div>
+          <div class="card-desc">Testosterone Replacement Therapy for men experiencing low T — restoring energy, libido, muscle mass, mood, and cognitive clarity. Personalized dosing based on your labs. Available as injections, gels, or pellets.</div>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-footer">
+          <div class="card-price">From $149<span>/mo</span></div>
+          <a href="#" class="card-link" style="color:var(--orange)">Learn more →</a>
         </div>
       </div>
 
-      <!-- SS-31 -->
-      <div class="peptide-card fade-up">
-        <div class="card-stripe" style="background:var(--cyan)"></div>
-        <div class="card-body">
-          <div class="card-top">
-            <div class="card-name">SS-31</div>
-            <span class="tag" style="background:rgba(144,220,247,0.12);color:var(--cyan);border:1px solid rgba(144,220,247,0.25)">Cellular</span>
-          </div>
-          <div class="card-tagline">Mitochondrial Shield & Energy Optimizer</div>
-          <div class="card-desc">Elamipretide — a mitochondria-targeting peptide that selectively concentrates in the inner mitochondrial membrane. Protects mitochondria from oxidative damage and dramatically restores energy production in aging cells.</div>
-          <ul class="card-benefits">
-            <li>Protects mitochondrial membranes</li>
-            <li>Restores cellular energy (ATP) production</li>
-            <li>Reduces oxidative stress at the source</li>
-            <li>Supports cardiovascular & muscle health</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-ideal"><strong>Ideal for:</strong> Chronic fatigue, cellular aging, cardiovascular health</div>
-            <div class="card-price" style="color:var(--cyan)">From $219/mo</div>
-          </div>
+      <!-- HRT -->
+      <div class="product-card theme-pink fade-up">
+        <div class="card-header">
+          <div class="card-icon">🌸</div>
+          <div class="card-name">HRT</div>
+          <div class="card-category">Women's Health · Hormones</div>
+          <div class="card-desc">Hormone Replacement Therapy for women navigating perimenopause or menopause — reducing hot flashes, improving sleep, protecting bone density, and restoring vitality. Bioidentical options available.</div>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-footer">
+          <div class="card-price">From $139<span>/mo</span></div>
+          <a href="#" class="card-link" style="color:var(--pink)">Learn more →</a>
         </div>
       </div>
 
-      <!-- Humanin -->
-      <div class="peptide-card fade-up">
-        <div class="card-stripe" style="background:var(--blue)"></div>
-        <div class="card-body">
-          <div class="card-top">
-            <div class="card-name">Humanin</div>
-            <span class="tag" style="background:rgba(132,169,250,0.12);color:var(--blue);border:1px solid rgba(132,169,250,0.25)">Cognitive</span>
-          </div>
-          <div class="card-tagline">The Neuroprotective Peptide</div>
-          <div class="card-desc">A mitochondrial-derived peptide with potent neuroprotective and cytoprotective effects. Humanin protects neurons from stress-induced apoptosis and has shown promise in Alzheimer's research. Declines sharply with age.</div>
-          <ul class="card-benefits">
-            <li>Protects neurons from cell death</li>
-            <li>Reduces cognitive decline risk</li>
-            <li>Anti-inflammatory & anti-apoptotic</li>
-            <li>Supports insulin sensitivity</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-ideal"><strong>Ideal for:</strong> Brain health, cognitive protection, aging prevention</div>
-            <div class="card-price" style="color:var(--blue)">From $239/mo</div>
-          </div>
+      <!-- B12 -->
+      <div class="product-card theme-green fade-up">
+        <div class="card-header">
+          <div class="card-icon">⚡</div>
+          <div class="card-name">B12 Injection</div>
+          <div class="card-category">Energy · Metabolism</div>
+          <div class="card-desc">Methylcobalamin B12 delivered via injection for superior absorption vs. oral supplements. Boosts energy levels, supports metabolism, enhances mood and cognitive function. A cornerstone of any wellness protocol.</div>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-footer">
+          <div class="card-price">From $49<span>/mo</span></div>
+          <a href="#" class="card-link" style="color:var(--green)">Learn more →</a>
         </div>
       </div>
 
-      <!-- MOTS-c -->
-      <div class="peptide-card fade-up">
-        <div class="card-stripe" style="background:var(--soft-green)"></div>
-        <div class="card-body">
-          <div class="card-top">
-            <div class="card-name">MOTS-c</div>
-            <span class="tag" style="background:rgba(153,195,116,0.12);color:var(--soft-green);border:1px solid rgba(153,195,116,0.25)">Cellular</span>
-          </div>
-          <div class="card-tagline">Exercise in a Peptide</div>
-          <div class="card-desc">A mitochondrial-derived peptide that acts as a powerful metabolic regulator — mimicking many of the metabolic benefits of exercise at the cellular level. MOTS-c activates AMPK and improves glucose utilization across tissues.</div>
-          <ul class="card-benefits">
-            <li>Improves insulin sensitivity dramatically</li>
-            <li>Enhances metabolic flexibility</li>
-            <li>Activates AMPK (longevity pathway)</li>
-            <li>Supports healthy aging & weight</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-ideal"><strong>Ideal for:</strong> Metabolic health, insulin resistance, longevity</div>
-            <div class="card-price" style="color:var(--soft-green)">From $229/mo</div>
-          </div>
-        </div>
-      </div>
+    </div>
+  </div>
+</section>
 
+<!-- WHY REVIVE -->
+<section class="why-section" id="why">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Why Revive Longevity</div>
+      <h2>Healthcare that actually works<br/>for you.</h2>
+      <p>We combine clinical expertise with modern convenience to make premium wellness accessible.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <div class="why-icon">🩺</div>
+        <h3>Licensed Medical Providers</h3>
+        <p>Every protocol is reviewed and prescribed by a licensed physician. You get real clinical oversight — not an algorithm.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">🏭</div>
+        <h3>FDA-Registered Pharmacies</h3>
+        <p>Your medication is compounded and dispensed by licensed, FDA-registered pharmacies. Quality and purity you can trust.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">📦</div>
+        <h3>Delivered to Your Door</h3>
+        <p>Discreet, temperature-controlled shipping directly to you. No pharmacy trips, no waiting rooms, no insurance headaches.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">💬</div>
+        <h3>Ongoing Provider Support</h3>
+        <p>Your care doesn't stop at the prescription. Ongoing check-ins, protocol adjustments, and direct provider access included.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">🔬</div>
+        <h3>Evidence-Based Protocols</h3>
+        <p>Every treatment we offer is backed by peer-reviewed research. We don't guess — we rely on the science.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">💰</div>
+        <h3>Transparent Pricing</h3>
+        <p>No hidden fees, no surprise bills. Clear pricing, no insurance required. Premium care at a fraction of traditional clinic costs.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -654,8 +664,8 @@
         <div class="stat-label">Satisfaction Rate</div>
       </div>
       <div class="fade-up">
-        <div class="stat-num">15+</div>
-        <div class="stat-label">Peptide Protocols</div>
+        <div class="stat-num">8</div>
+        <div class="stat-label">Treatment Protocols</div>
       </div>
       <div class="fade-up">
         <div class="stat-num">48h</div>
@@ -669,72 +679,72 @@
 <section class="how-section" id="how">
   <div class="container">
     <div class="section-header fade-up">
-      <h2>How It Works</h2>
-      <div class="accent-line"></div>
-      <p>Getting started is simple. Your personalized protocol is three steps away.</p>
+      <div class="section-label">Simple Process</div>
+      <h2>Get started in 3 easy steps.</h2>
+      <p>From your first question to treatment at your door — we make it effortless.</p>
     </div>
-    <div class="steps-grid">
+    <div class="steps-row">
       <div class="step fade-up">
         <div class="step-num">1</div>
-        <h3>Take the Quiz</h3>
-        <p>Answer a few questions about your health history, goals, and lifestyle — 100% online, takes under 5 minutes.</p>
+        <h3>Complete Your Assessment</h3>
+        <p>Answer a few questions about your health history, goals, and lifestyle. 100% online. Takes less than 5 minutes.</p>
       </div>
       <div class="step fade-up">
         <div class="step-num">2</div>
-        <h3>Get Your Protocol</h3>
-        <p>A licensed provider reviews your intake and designs a personalized peptide protocol tailored to your biology and goals.</p>
+        <h3>Connect With a Provider</h3>
+        <p>A licensed medical provider reviews your intake and recommends a personalized protocol — tailored to your biology and goals.</p>
       </div>
       <div class="step fade-up">
         <div class="step-num">3</div>
-        <h3>Start Thriving</h3>
-        <p>Your medication ships discreetly to your door in 48 hours. Ongoing provider support included every step of the way.</p>
+        <h3>Receive & Transform</h3>
+        <p>Your medication ships discreetly to your door in as little as 48 hours. Ongoing support and check-ins included.</p>
       </div>
     </div>
     <div class="how-cta fade-up">
-      <a href="#peptides" class="btn btn-green">Start My Protocol →</a>
+      <a href="#products" class="btn btn-green">Start My Assessment →</a>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="testimonials-section" id="science">
+<section class="testi-section">
   <div class="container">
     <div class="section-header fade-up">
-      <h2>Real Results. Real People.</h2>
-      <div class="accent-line"></div>
-      <p>Join thousands of members who've transformed their health with Revive Longevity protocols.</p>
+      <div class="section-label">Member Stories</div>
+      <h2>Real results. Real people.</h2>
+      <p>Join thousands who've transformed their health with Revive Longevity.</p>
     </div>
-    <div class="testimonials-grid">
+    <div class="testi-grid">
       <div class="testi-card fade-up">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"BPC-157 completely healed my shoulder injury in 6 weeks. I had resigned myself to surgery. My orthopedic surgeon couldn't believe the recovery. This stuff is real."</p>
+        <p class="testi-quote">"I've lost 34 lbs on Tirzepatide over 4 months and I genuinely don't feel like I'm on a diet. The team made the whole process so simple. Best decision I've ever made for my health."</p>
         <div class="testi-author">
           <div class="testi-avatar">M</div>
           <div>
             <div class="testi-name">Marcus T., 41</div>
-            <div class="testi-loc">Austin, TX</div>
+            <div class="testi-meta">Austin, TX · Tirzepatide</div>
           </div>
         </div>
       </div>
       <div class="testi-card fade-up">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"Epithalon changed my sleep and energy within 2 weeks. I feel genuinely 10 years younger. My skin, my focus, my drive — everything improved. I'm not stopping."</p>
+        <p class="testi-quote">"HRT literally gave me my life back. The brain fog, the sleep issues, the mood swings — gone within 6 weeks. I feel like myself again for the first time in years."</p>
         <div class="testi-author">
-          <div class="testi-avatar" style="background:linear-gradient(135deg,var(--lavender),var(--pink))">S</div>
+          <div class="testi-avatar" style="background:var(--pink)">S</div>
           <div>
-            <div class="testi-name">Sandra K., 54</div>
-            <div class="testi-loc">New York, NY</div>
+            <div class="testi-name">Sandra K., 52</div>
+            <div class="testi-meta">New York, NY · HRT</div>
           </div>
         </div>
       </div>
       <div class="testi-card fade-up">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"The CJC-1295 + Ipamorelin stack transformed my body. Down 18 lbs, more muscle than I had at 28. The team was incredible at walking me through everything."</p>
+        <p class="testi-quote">"TRT + Sermorelin changed everything. Energy is through the roof, I'm building muscle again at 44, and my confidence is back. The provider check-ins are genuinely helpful."</p>
         <div class="testi-author">
-          <div class="testi-avatar" style="background:linear-gradient(135deg,var(--soft-green),var(--cyan))">J</div>
+          <div class="testi-avatar" style="background:var(--orange)">J</div>
           <div>
-            <div class="testi-name">James R., 38</div>
-            <div class="testi-loc">Miami, FL</div>
+            <div class="testi-name">James R., 44</div>
+            <div class="testi-meta">Miami, FL · TRT + Sermorelin</div>
           </div>
         </div>
       </div>
@@ -746,88 +756,84 @@
 <section class="faq-section" id="faq">
   <div class="container">
     <div class="section-header fade-up">
-      <h2>Frequently Asked Questions</h2>
-      <div class="accent-line"></div>
+      <div class="section-label">FAQ</div>
+      <h2>Common questions.</h2>
     </div>
-    <div class="faq-list">
+    <div class="faq-wrap">
       <div class="faq-item fade-up">
-        <button class="faq-q">
-          What are peptides and are they safe?
+        <button class="faq-q">Do I need a prescription?
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
         </button>
-        <div class="faq-a"><p>Peptides are short chains of amino acids — the building blocks of proteins — that act as precise signaling molecules in the body. They communicate with cells to trigger specific biological responses. Therapeutic peptides have excellent safety profiles because they mimic your body's own processes. When used under licensed medical supervision with proper dosing and pharmaceutical-grade sourcing, they are considered very safe.</p></div>
+        <div class="faq-a"><p>Yes — all our treatments are prescription medications. Your intake is reviewed by a licensed medical provider who will prescribe your protocol if medically appropriate. We handle the entire process online. No in-person visit required.</p></div>
       </div>
       <div class="faq-item fade-up">
-        <button class="faq-q">
-          How are protocols administered?
+        <button class="faq-q">Is insurance accepted?
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
         </button>
-        <div class="faq-a"><p>Most therapeutic peptides are administered via subcutaneous injection — a small needle just under the skin, similar to a diabetic insulin injection. It sounds intimidating but is virtually painless. Some peptides are available as nasal sprays, topical creams, or oral tablets. Your protocol will include full administration instructions and our team is available to walk you through it.</p></div>
+        <div class="faq-a"><p>We do not accept insurance — all pricing is straightforward, transparent, and out-of-pocket. This allows us to provide faster, more personalized care without the limitations and delays of insurance. Many members find our pricing is competitive even compared to insurance copays.</p></div>
       </div>
       <div class="faq-item fade-up">
-        <button class="faq-q">
-          How long until I see results?
+        <button class="faq-q">How long until I see results?
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
         </button>
-        <div class="faq-a"><p>It varies by peptide and goal. BPC-157 users often report noticeable healing within 2–4 weeks. GH secretagogues like CJC-1295 and Ipamorelin typically show body composition changes over 8–12 weeks. Epithalon effects on sleep are often felt within the first week. Most members report progressive improvements over 3–6 months of consistent therapy.</p></div>
+        <div class="faq-a"><p>Results vary by treatment. GLP-1 medications like Semaglutide and Tirzepatide typically show meaningful weight loss within 4–8 weeks. Hormone therapies (TRT/HRT) often show mood and energy improvements within 2–4 weeks, with physical changes over 2–3 months. NAD+ and B12 often produce energy effects within days of the first treatment.</p></div>
       </div>
       <div class="faq-item fade-up">
-        <button class="faq-q">
-          Do I need a prescription?
+        <button class="faq-q">Is the medication safe and legitimate?
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
         </button>
-        <div class="faq-a"><p>Many peptides require a prescription and are dispensed by licensed compounding pharmacies. Our intake process includes a free consultation with a licensed medical provider who will review your health history and, if appropriate, prescribe your protocol. We handle the entire process — you just complete the online intake.</p></div>
+        <div class="faq-a"><p>All medications are compounded by licensed, FDA-registered pharmacies following strict quality standards. Every protocol is prescribed by a licensed physician. We do not dispense unregulated supplements or black-market compounds — only pharmaceutical-grade medications prescribed within the standard of care.</p></div>
       </div>
       <div class="faq-item fade-up">
-        <button class="faq-q">
-          Can I stack multiple peptides?
+        <button class="faq-q">Can I combine multiple treatments?
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
         </button>
-        <div class="faq-a"><p>Yes — many of our most popular protocols are combinations. BPC-157 + TB-500 is a classic healing stack. CJC-1295 + Ipamorelin is the gold standard for GH optimization. Our providers will design a stacked protocol if your goals and health history support it, ensuring there are no contraindications.</p></div>
+        <div class="faq-a"><p>Yes — many of our most successful members use stacked protocols. Popular combinations include Semaglutide + B12 for weight loss, or TRT + Sermorelin for men's health optimization. Your provider will design a combined protocol if appropriate for your health history and goals.</p></div>
       </div>
       <div class="faq-item fade-up">
-        <button class="faq-q">
-          Is there ongoing support after I start?
+        <button class="faq-q">What ongoing support do I get?
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
         </button>
-        <div class="faq-a"><p>Absolutely. Every Revive Longevity member gets ongoing access to their provider team for questions and protocol adjustments. We schedule regular check-ins to track your progress and optimize your protocol over time. You are never left on your own — this is a partnership.</p></div>
+        <div class="faq-a"><p>Every member gets ongoing access to their provider team for questions and protocol adjustments. We schedule regular check-ins to review your progress, adjust dosing as needed, and optimize your protocol over time. You're never on your own — this is a long-term partnership.</p></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CTA BANNER -->
-<section class="cta-banner">
-  <h2 class="fade-up">Ready to <span style="background:linear-gradient(135deg,var(--blue),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Revive?</span></h2>
-  <p class="fade-up">Join 2,400+ members who've taken control of their longevity. Free consultation. No insurance required.</p>
-  <a href="#peptides" class="btn btn-green fade-up">Start Your Protocol →</a>
+<section class="cta-section">
+  <h2 class="fade-up">Ready to feel your best?</h2>
+  <p class="fade-up">Free consultation. No insurance required. Results you'll actually feel.</p>
+  <div class="cta-btns fade-up">
+    <a href="#products" class="btn btn-green">Start My Assessment →</a>
+    <a href="#products" class="btn btn-outline">View All Treatments</a>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="logo">Revive <span>Longevity</span></div>
-        <p>Pioneering the future of health optimization through advanced peptide therapy and personalized longevity protocols.</p>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <div class="f-logo">Revive <span>Longevity</span></div>
+        <p>Personalized wellness protocols designed by licensed providers. Weight loss, hormones, and longevity — delivered to your door.</p>
       </div>
-      <div class="footer-col">
-        <h4>Protocols</h4>
-        <a href="#peptides">BPC-157</a>
-        <a href="#peptides">Epithalon</a>
-        <a href="#peptides">Sermorelin</a>
-        <a href="#peptides">CJC-1295</a>
-        <a href="#peptides">All Peptides</a>
+      <div class="f-col">
+        <h4>Treatments</h4>
+        <a href="#">Semaglutide</a>
+        <a href="#">Tirzepatide</a>
+        <a href="#">Sermorelin</a>
+        <a href="#">NAD+</a>
+        <a href="#">All Treatments</a>
       </div>
-      <div class="footer-col">
+      <div class="f-col">
         <h4>Company</h4>
         <a href="#">About Us</a>
-        <a href="#">Science</a>
-        <a href="#how">How It Works</a>
+        <a href="#">How It Works</a>
         <a href="#">Blog</a>
         <a href="#">Contact</a>
       </div>
-      <div class="footer-col">
+      <div class="f-col">
         <h4>Support</h4>
         <a href="#">FAQ</a>
         <a href="mailto:info@revivelongevity.com">info@revivelongevity.com</a>
@@ -837,51 +843,45 @@
     </div>
     <div class="footer-bottom">
       <p>© 2026 Revive Longevity. All rights reserved.</p>
-      <p style="color:var(--gray-3)">Science. Longevity. Revived.</p>
+      <p>Personalized. Science-Backed. Revived.</p>
     </div>
   </div>
-  <p class="footer-disclaimer">For research and educational purposes only. Consult a licensed medical provider before beginning any peptide therapy protocol. These statements have not been evaluated by the FDA.</p>
+  <div class="container">
+    <p class="footer-disclaimer">
+      All treatments require a valid prescription from a licensed medical provider. Medications are compounded by FDA-registered pharmacies. These products have not been evaluated by the FDA for the specific uses described. Results may vary. This website does not provide medical advice. Consult a licensed healthcare provider before beginning any treatment.
+    </p>
+  </div>
 </footer>
 
 <script>
-  // NAV SCROLL
+  // NAV SCROLL SHADOW
   const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-  });
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 30), { passive: true });
 
   // HAMBURGER
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-  });
-  document.querySelectorAll('.mob-link, .mobile-menu .btn').forEach(el => {
-    el.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-    });
-  });
+  const ham = document.getElementById('hamburger');
+  const mob = document.getElementById('mobile-menu');
+  ham.addEventListener('click', () => { ham.classList.toggle('open'); mob.classList.toggle('open'); });
+  mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { ham.classList.remove('open'); mob.classList.remove('open'); }));
 
-  // FADE-UP ON SCROLL
-  const observer = new IntersectionObserver((entries) => {
+  // FADE-UP OBSERVER
+  const io = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
       if (e.isIntersecting) {
-        setTimeout(() => e.target.classList.add('visible'), i * 80);
-        observer.unobserve(e.target);
+        setTimeout(() => e.target.classList.add('visible'), i * 70);
+        io.unobserve(e.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
 
-  // FAQ ACCORDION
+  // FAQ
   document.querySelectorAll('.faq-q').forEach(btn => {
     btn.addEventListener('click', () => {
       const item = btn.parentElement;
-      const isOpen = item.classList.contains('open');
+      const open = item.classList.contains('open');
       document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
+      if (!open) item.classList.add('open');
     });
   });
 </script>
