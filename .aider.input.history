@@ -94,3 +94,61 @@
 +- Footer: dark teal background (#253031) with cream text
 +
 +FEEL: Think premium wellness spa meets modern medical clinic. Warm, trustworthy, approachable. Like vyorawellness.com but for peptide longevity therapy.
+
+# 2026-03-10 23:41:30.693463
++Completely redesign index.html to match the look and feel of tryeden.com. Keep all Revive Longevity content (brand, top 10 peptides, etc.) but adopt this design:
++
++DESIGN SYSTEM (inspired by tryeden.com):
++- Background: near-black (#171717 / #1A1A1A) — very dark, Apple-style
++- Secondary bg: slightly lighter dark (#1D1D1F, #333336)
++- Cards: soft light gray (#F7F7F7) on dark background — high contrast
++- Accent colors: soft pastels used as pill/badge highlights:
++  - Soft blue: #84A9FA
++  - Soft cyan: #90DCF7
++  - Soft green: #99C374 / #C7E9AB
++  - Soft peach: #FBA69E / #FDD4A3
++- Text on dark: white / light gray
++- Text on cards: near black (#171717)
++- Font: Use 'Inter' from Google Fonts — clean, modern, Apple-like
++
++LAYOUT:
++- Hero: full dark section, large bold white headline, soft pastel CTA button, subtitle in light gray
++- Nav: minimal dark nav, logo left, links right, 'Get Started' CTA button in soft blue
++- Category pills: horizontal scrollable row of soft pastel pill badges (Weight Loss, Anti-Aging, Performance, Recovery, Cognitive, etc.)
++- Peptide cards: light (#F7F7F7) rounded cards on dark background — name bold dark, description gray, colored accent tag per category
++- Stats strip: dark section with large white numbers and light gray labels
++- Testimonials: dark cards with white text, star ratings, member name + location
++- How It Works: 3 steps with soft pastel numbered circles on dark background
++- FAQ: dark accordion with subtle borders
++- Footer: very dark (#1A1A1A) with soft gray text and pastel hover links
++
++FEEL: Think Apple.com meets modern telehealth. Dark, sleek, premium, trustworthy. Clean typography, lots of breathing room, subtle pastel accents that pop against the dark background. Like tryeden.com but for peptide longevity therapy.
+
+# 2026-03-10 23:41:30.693591
++Completely redesign index.html to match the look and feel of tryeden.com. Keep all Revive Longevity content (brand, top 10 peptides, etc.) but adopt this design:
++
++DESIGN SYSTEM (inspired by tryeden.com):
++- Background: near-black (#171717 / #1A1A1A) — very dark, Apple-style
++- Secondary bg: slightly lighter dark (#1D1D1F, #333336)
++- Cards: soft light gray (#F7F7F7) on dark background — high contrast
++- Accent colors: soft pastels used as pill/badge highlights:
++  - Soft blue: #84A9FA
++  - Soft cyan: #90DCF7
++  - Soft green: #99C374 / #C7E9AB
++  - Soft peach: #FBA69E / #FDD4A3
++- Text on dark: white / light gray
++- Text on cards: near black (#171717)
++- Font: Use 'Inter' from Google Fonts — clean, modern, Apple-like
++
++LAYOUT:
++- Hero: full dark section, large bold white headline, soft pastel CTA button, subtitle in light gray
++- Nav: minimal dark nav, logo left, links right, 'Get Started' CTA button in soft blue
++- Category pills: horizontal scrollable row of soft pastel pill badges (Weight Loss, Anti-Aging, Performance, Recovery, Cognitive, etc.)
++- Peptide cards: light (#F7F7F7) rounded cards on dark background — name bold dark, description gray, colored accent tag per category
++- Stats strip: dark section with large white numbers and light gray labels
++- Testimonials: dark cards with white text, star ratings, member name + location
++- How It Works: 3 steps with soft pastel numbered circles on dark background
++- FAQ: dark accordion with subtle borders
++- Footer: very dark (#1A1A1A) with soft gray text and pastel hover links
++
++FEEL: Think Apple.com meets modern telehealth. Dark, sleek, premium, trustworthy. Clean typography, lots of breathing room, subtle pastel accents that pop against the dark background. Like tryeden.com but for peptide longevity therapy.

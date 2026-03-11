@@ -6,7 +6,7 @@
     <title>Revive Longevity | Premium Peptide Therapy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,15 +15,18 @@
         }
 
         :root {
-            --bg-primary: #F5F2E9;
-            --bg-secondary: #EBE8DD;
-            --bg-card: #FFFFFF;
-            --accent-teal: #778B8B;
-            --accent-dark: #253031;
-            --text-primary: #253031;
-            --text-secondary: #5A6B6C;
-            --border-color: #D4D1C8;
-            --white: #FFFFFF;
+            --bg-primary: #171717;
+            --bg-secondary: #1D1D1F;
+            --bg-card: #F7F7F7;
+            --bg-dark-card: #1A1A1A;
+            --accent-blue: #84A9FA;
+            --accent-cyan: #90DCF7;
+            --accent-green: #99C374;
+            --accent-peach: #FBA69E;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A1A1A6;
+            --text-on-card: #171717;
+            --border-color: #333336;
         }
 
         html {
@@ -31,7 +34,7 @@
         }
 
         body {
-            font-family: 'DM Sans', sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: var(--bg-primary);
             color: var(--text-primary);
             line-height: 1.6;
@@ -43,8 +46,9 @@
             top: 0;
             left: 0;
             right: 0;
-            background: var(--bg-primary);
-            padding: 1.5rem 2rem;
+            background: rgba(23, 23, 23, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1.25rem 2rem;
             z-index: 1000;
             border-bottom: 1px solid var(--border-color);
         }
@@ -60,19 +64,20 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--accent-dark);
+            color: var(--text-primary);
             text-decoration: none;
             letter-spacing: -0.5px;
         }
 
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: 2rem;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
-            color: var(--text-primary);
+            color: var(--text-secondary);
             text-decoration: none;
             font-weight: 500;
             font-size: 0.95rem;
@@ -80,7 +85,23 @@
         }
 
         .nav-links a:hover {
-            color: var(--accent-teal);
+            color: var(--text-primary);
+        }
+
+        .nav-cta {
+            background: var(--accent-blue);
+            color: var(--text-primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(132, 169, 250, 0.3);
         }
 
         /* Hero Section */
@@ -90,7 +111,7 @@
             align-items: center;
             justify-content: center;
             padding: 8rem 2rem 4rem;
-            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
             position: relative;
         }
 
@@ -102,12 +123,12 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
-            color: var(--accent-dark);
-            letter-spacing: -1px;
-            line-height: 1.2;
+            color: var(--text-primary);
+            letter-spacing: -1.5px;
+            line-height: 1.1;
         }
 
         .hero p {
@@ -117,18 +138,18 @@
             line-height: 1.8;
             max-width: 700px;
             margin-left: auto;
-            margin margin-right: auto;
+            margin-right: auto;
         }
 
         .cta-button {
             display: inline-block;
             padding: 1rem 2.5rem;
-            background: var(--accent-teal);
-            color: var(--white);
+            background: var(--accent-blue);
+            color: var(--text-primary);
             text-decoration: none;
             font-weight: 600;
             border-radius: 50px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: none;
             cursor: pointer;
             font-size: 1rem;
@@ -136,9 +157,34 @@
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(119, 139, 139, 0.3);
-            background: #6A7D7D;
+            box-shadow: 0 15px 40px rgba(132, 169, 250, 0.4);
         }
+
+        /* Category Pills */
+        .category-pills {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .category-pill {
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.3s ease;
+        }
+
+        .category-pill:hover {
+            transform: translateY(-2px);
+        }
+
+        .pill-blue { background: var(--accent-blue); color: white; }
+        .pill-cyan { background: var(--accent-cyan); color: #171717; }
+        .pill-green { background: var(--accent-green); color: #171717; }
+        .pill-peach { background: var(--accent-peach); color: #171717; }
 
         /* Section Styles */
         section {
@@ -151,12 +197,12 @@
         }
 
         .section-title {
-            font-size: 2.5rem;
+            font-size: 2.75rem;
             font-weight: 700;
             text-align: center;
             margin-bottom: 1rem;
-            color: var(--accent-dark);
-            letter-spacing: -0.5px;
+            color: var(--text-primary);
+            letter-spacing: -1px;
         }
 
         .section-subtitle {
@@ -172,7 +218,7 @@
         /* Stats Bar */
         .stats-bar {
             background: var(--bg-secondary);
-            padding: 3rem 2rem;
+            padding: 4rem 2rem;
             border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
         }
@@ -190,9 +236,9 @@
         }
 
         .stat-number {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 700;
-            color: var(--accent-teal);
+            color: var(--text-primary);
             margin-bottom: 0.5rem;
             letter-spacing: -1px;
         }
@@ -216,9 +262,9 @@
         }
 
         .about-text h3 {
-            font-size: 1.75rem;
+            font-size: 2rem;
             margin-bottom: 1.5rem;
-            color: var(--accent-dark);
+            color: var(--text-primary);
             font-weight: 600;
         }
 
@@ -229,7 +275,7 @@
         }
 
         .about-image {
-            background: var(--bg-secondary);
+            background: var(--bg-card);
             border-radius: 20px;
             height: 400px;
             display: flex;
@@ -256,28 +302,27 @@
 
         .peptide-card {
             background: var(--bg-card);
-            border-radius: 16px;
+            border-radius: 20px;
             padding: 2rem;
-            border: 1px solid var(--border-color);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
         }
 
         .peptide-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(37, 48, 49, 0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
 
         .peptide-name {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             font-weight: 700;
-            color: var(--accent-dark);
+            color: var(--text-on-card);
             margin-bottom: 1rem;
             letter-spacing: -0.5px;
         }
 
         .peptide-description {
-            color: var(--text-secondary);
+            color: #6B6B6B;
             margin-bottom: 1.5rem;
             line-height: 1.7;
         }
@@ -287,7 +332,7 @@
         }
 
         .peptide-benefits h4 {
-            color: var(--accent-dark);
+            color: var(--text-on-card);
             margin-bottom: 0.75rem;
             font-size: 1rem;
             font-weight: 600;
@@ -295,7 +340,7 @@
 
         .peptide-benefits ul {
             list-style: none;
-            color: var(--text-secondary);
+            color: #6B6B6B;
         }
 
         .peptide-benefits li {
@@ -308,26 +353,40 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: var(--accent-teal);
+            color: var(--accent-green);
             font-weight: 600;
         }
 
         .peptide-target {
-            border-top: 1px solid var(--border-color);
+            border-top: 1px solid #E5E5E5;
             padding-top: 1rem;
         }
 
         .peptide-target h4 {
-            color: var(--accent-dark);
+            color: var(--text-on-card);
             margin-bottom: 0.5rem;
             font-size: 1rem;
             font-weight: 600;
         }
 
         .peptide-target p {
-            color: var(--text-secondary);
+            color: #6B6B6B;
             font-size: 0.9rem;
         }
+
+        .peptide-tag {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .tag-blue { background: var(--accent-blue); color: white; }
+        .tag-cyan { background: var(--accent-cyan); color: #171717; }
+        .tag-green { background: var(--accent-green); color: #171717; }
+        .tag-peach { background: var(--accent-peach); color: #171717; }
 
         /* Testimonials Section */
         .testimonials {
@@ -341,14 +400,14 @@
         }
 
         .testimonial-card {
-            background: var(--bg-card);
-            border-radius: 16px;
+            background: var(--bg-dark-card);
+            border-radius: 20px;
             padding: 2.5rem;
             border: 1px solid var(--border-color);
         }
 
         .testimonial-text {
-            color: var(--text-secondary);
+            color: var(--text-primary);
             font-size: 1.05rem;
             line-height: 1.8;
             margin-bottom: 1.5rem;
@@ -365,17 +424,17 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background: var(--accent-teal);
+            background: var(--accent-blue);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--white);
+            color: var(--text-primary);
             font-weight: 600;
             font-size: 1.2rem;
         }
 
         .testimonial-info h4 {
-            color: var(--accent-dark);
+            color: var(--text-primary);
             font-size: 1rem;
             margin-bottom: 0.25rem;
         }
@@ -383,6 +442,11 @@
         .testimonial-info p {
             color: var(--text-secondary);
             font-size: 0.85rem;
+        }
+
+        .testimonial-stars {
+            color: var(--accent-peach);
+            margin-bottom: 1rem;
         }
 
         /* How It Works Section */
@@ -398,9 +462,9 @@
         }
 
         .step-card {
-            background: var(--bg-card);
+            background: var(--bg-dark-card);
             padding: 2.5rem;
-            border-radius: 16px;
+            border-radius: 20px;
             text-align: center;
             border: 1px solid var(--border-color);
         }
@@ -408,20 +472,20 @@
         .step-number {
             width: 60px;
             height: 60px;
-            background: var(--accent-teal);
+            background: var(--accent-blue);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--white);
+            color: var(--text-primary);
             margin: 0 auto 1.5rem;
         }
 
         .step-card h3 {
             font-size: 1.5rem;
-            color: var(--accent-dark);
+            color: var(--text-primary);
             margin-bottom: 1rem;
             font-weight: 600;
         }
@@ -442,8 +506,8 @@
         }
 
         .faq-item {
-            background: var(--bg-card);
-            border-radius: 12px;
+            background: var(--bg-dark-card);
+            border-radius: 16px;
             margin-bottom: 1rem;
             border: 1px solid var(--border-color);
             overflow: hidden;
@@ -456,7 +520,7 @@
             justify-content: space-between;
             align-items: center;
             font-weight: 600;
-            color: var(--accent-dark);
+            color: var(--text-primary);
             transition: background 0.3s ease;
             font-size: 1rem;
         }
@@ -468,7 +532,7 @@
         .faq-question::after {
             content: '+';
             font-size: 1.5rem;
-            color: var(--accent-teal);
+            color: var(--accent-blue);
             transition: transform 0.3s ease;
         }
 
@@ -495,8 +559,9 @@
 
         /* Footer */
         footer {
-            background: var(--accent-dark);
+            background: var(--bg-primary);
             padding: 4rem 2rem 2rem;
+            border-top: 1px solid var(--border-color);
         }
 
         .footer-content {
@@ -509,18 +574,18 @@
 
         .footer-brand h2 {
             font-size: 1.75rem;
-            color: var(--white);
+            color: var(--text-primary);
             margin-bottom: 1rem;
             font-weight: 700;
         }
 
         .footer-brand p {
-            color: #A8B5B6;
+            color: var(--text-secondary);
             line-height: 1.7;
         }
 
         .footer-links h4 {
-            color: var(--white);
+            color: var(--text-primary);
             margin-bottom: 1.5rem;
             font-weight: 600;
         }
@@ -534,22 +599,22 @@
         }
 
         .footer-links a {
-            color: #A8B5B6;
+            color: var(--text-secondary);
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .footer-links a:hover {
-            color: var(--accent-teal);
+            color: var(--accent-blue);
         }
 
         .footer-bottom {
             max-width: 1200px;
             margin: 3rem auto 0;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid var(--border-color);
             text-align: center;
-            color: #A8B5B6;
+            color: var(--text-secondary);
         }
 
         /* Animations */
@@ -594,8 +659,8 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .stat-card {
-                padding: 1.5rem;
+            .category-pills {
+                flex-wrap: wrap;
             }
         }
 
@@ -630,6 +695,7 @@
                 <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
+            <a href="#peptides" class="nav-cta">Get Started</a>
         </div>
     </nav>
 
@@ -639,6 +705,13 @@
             <h1>Unlock Your Longevity Potential</h1>
             <p>Revive Longevity delivers cutting-edge peptide therapy protocols designed to optimize health, enhance performance, and extend your healthspan. Science-backed solutions for the modern individual.</p>
             <a href="#peptides" class="cta-button">Explore Our Protocols</a>
+            
+            <div class="category-pills">
+                <span class="category-pill pill-blue">Anti-Aging</span>
+                <span class="category-pill pill-cyan">Performance</span>
+                <span class="category-pill pill-green">Recovery</span>
+                <span class="category-pill pill-peach">Cognitive Health</span>
+            </div>
         </div>
     </section>
 
@@ -694,6 +767,7 @@
             <div class="peptides-grid">
                 <!-- BPC-157 -->
                 <div class="peptide-card">
+                    <span class="peptide-tag tag-green">Recovery</span>
                     <h3 class="peptide-name">BPC-157</h3>
                     <p class="peptide-description">Body Protection Compound derived from stomach lining proteins. Known as the "wonder peptide" for its remarkable healing properties throughout the body.</p>
                     <div class="peptide-benefits">
@@ -713,6 +787,7 @@
 
                 <!-- TB-500 -->
                 <div class="peptide-card">
+                    <span class="peptide-tag tag-green">Recovery</span>
                     <h3 class="peptide-name">TB-500</h3>
                     <p class="peptide-description">Synthetic version of Thymosin Beta-4, a protein naturally produced in the body. Works synergistically with BPC-157 for comprehensive tissue repair.</p>
                     <div class="peptide-benefits">
@@ -732,6 +807,7 @@
 
                 <!-- Epithalon -->
                 <div class="peptide-card">
+                    <span class="peptide-tag tag-blue">Anti-Aging</span>
                     <h3 class="peptide-name">Epithalon</h3>
                     <p class="peptide-description">Synthetic version of epithalamin, a peptide that regulates the pineal gland. One of the most studied anti-aging peptides with telomere-supporting properties.</p>
                     <div class="peptide-benefits">
@@ -751,6 +827,7 @@
 
                 <!-- Sermorelin -->
                 <div class="peptide-card">
+                    <span class="peptide-tag tag-blue">Anti-Aging</span>
                     <h3 class="peptide-name">Sermorelin</h3>
                     <p class="peptide-description">Growth hormone-releasing hormone (GHRH) analog that stimulates the pituitary gland to produce natural growth hormone. A safer alternative to direct HGH therapy.</p>
                     <div class="peptide-benefits">
@@ -770,6 +847,7 @@
 
                 <!-- CJC-1295 -->
                 <div class="peptide-card">
+                    <span class="peptide-tag tag-cyan">Performance</span>
                     <h3 class="peptide-name">CJC-1295</h3>
                     <p class="peptide-description">Long-acting growth hormone-releasing peptide that extends the half-life of natural GHRH. Often combined with Ipamorelin for synergistic effects.</p>
                     <div class="peptide-benefits">
@@ -789,6 +867,7 @@
 
                 <!-- Ipamorelin -->
                 <div class="peptide-card">
+                    <span class="peptide-tag tag-cyan">Performance</span>
                     <h3 class="peptide-name">Ipamorelin</h3>
                     <p class="peptide-description">Selective growth hormone secretagogue that stimulates GH release without affecting cortisol or prolactin levels. Known for its clean side effect profile.</p>
                     <div class="peptide-benefits">
@@ -808,6 +887,7 @@
 
                 <!-- GHK-Cu -->
                 <div class="peptide-card">
+                    <span class="peptide-tag tag-peach">Skin Health</span>
                     <h3 class="peptide-name">GHK-Cu</h3>
                     <p class="peptide-description">Copper-binding peptide naturally found in human plasma. Renowned for its skin regeneration and wound healing properties, with systemic anti-aging effects.</p>
                     <div class="peptide-benefits">
@@ -827,6 +907,7 @@
 
                 <!-- SS-31 -->
                 <div class="peptide-card">
+                    <span class="peptide-tag tag-blue">Cellular Health</span>
                     <h3 class="peptide-name">SS-31</h3>
                     <p class="peptide-description">Mitochondrial-targeting peptide (Elamipretide) that protects and optimizes mitochondrial function. Critical for cellular energy production.</p>
                     <div class="peptide-benefits">
@@ -846,6 +927,7 @@
 
                 <!-- Humanin -->
                 <div class="peptide-card">
+                    <span class="peptide-tag tag-blue">Cognitive Health</span>
                     <h3 class="peptide-name">Humanin</h3>
                     <p class="peptide-description">Mitochondrial-derived peptide with potent neuroprotective properties. Plays a crucial role in protecting cells from stress and age-related decline.</p>
                     <div class="peptide-benefits">
@@ -865,6 +947,7 @@
 
                 <!-- MOTS-c -->
                 <div class="peptide-card">
+                    <span class="peptide-tag tag-cyan">Metabolic Health</span>
                     <h3 class="peptide-name">MOTS-c</h3>
                     <p class="peptide-description">Mitochondrial-derived peptide that acts as a metabolic regulator. Mimics the effects of exercise at the cellular level.</p>
                     <div class="peptide-benefits">
@@ -893,6 +976,7 @@
             
             <div class="testimonials-grid">
                 <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
                     <p class="testimonial-text">"After 6 months of peptide therapy, my energy levels have completely transformed. I feel 10 years younger and my recovery time from workouts has improved dramatically."</p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">MK</div>
@@ -904,6 +988,7 @@
                 </div>
 
                 <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
                     <p class="testimonial-text">"The personalized approach at Revive Longevity is what sets them apart. My protocol was tailored to my specific health goals, and the results have been incredible."</p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">SR</div>
@@ -915,6 +1000,7 @@
                 </div>
 
                 <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
                     <p class="testimonial-text">"I was skeptical at first, but the science-backed approach and ongoing support from the team made all the difference. My chronic pain is finally manageable."</p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">JD</div>
@@ -1028,7 +1114,7 @@
                 <ul>
                     <li><a href="mailto:info@revivelongevity.com">info@revivelongevity.com</a></li>
                     <li><a href="tel:+1-555-0123">+1 (555) 012-3456</a></li>
-                    <li><span style="color: #A8B5B6;">Available Mon-Fri, 9AM-6PM EST</span></li>
+                    <li><span style="color: var(--text-secondary);">Available Mon-Fri, 9AM-6PM EST</span></li>
                 </ul>
             </div>
         </div>
@@ -1092,9 +1178,9 @@
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
             if (window.scrollY > 100) {
-                nav.style.background = '#F5F2E9';
+                nav.style.background = 'rgba(23, 23, 23, 0.98)';
             } else {
-                nav.style.background = '#F5F2E9';
+                nav.style.background = 'rgba(23, 23, 23, 0.95)';
             }
         });
 
