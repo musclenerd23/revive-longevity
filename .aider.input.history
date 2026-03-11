@@ -1,0 +1,50 @@
+
+# 2026-03-10 15:38:23.790148
++You are building a professional website called 'Revive Longevity' — a modern, premium longevity and wellness brand focused on peptide therapy.
++
++TASK: Research the top 10 peptides used in longevity, anti-aging, and performance optimization using your training knowledge, then build a complete multi-section website.
++
++BUILD: Create index.html (single file with embedded CSS and JS) with these sections:
++1. Hero — bold headline, tagline, CTA button ('Explore Our Protocols')
++2. About — what Revive Longevity is, the science of peptides for longevity
++3. Top 10 Peptides — for each peptide include: name, what it does, key benefits, and who it's for. Use a card-based grid layout.
++4. How It Works — 3-step process (Consult → Protocol → Transform)
++5. FAQ — at least 5 common questions about peptide therapy
++6. Footer — brand name, tagline, copyright
++
++DESIGN:
++- Dark premium aesthetic (dark navy/black background, gold or cyan accents)
++- Modern clean fonts (use Google Fonts — suggest Inter or Poppins)
++- Fully responsive (mobile-friendly)
++- Smooth scroll, subtle animations on scroll
++- Professional, trustworthy medical/wellness feel
++
++PEPTIDES TO COVER (top 10 for longevity/performance):
++BPC-157, TB-500, Epithalon, Sermorelin, CJC-1295, Ipamorelin, GHK-Cu, SS-31, Humanin, MOTS-c
++
++For each peptide, draw on your knowledge to write accurate, informative descriptions of their mechanisms and benefits.
+
+# 2026-03-10 15:38:23.790270
++You are building a professional website called 'Revive Longevity' — a modern, premium longevity and wellness brand focused on peptide therapy.
++
++TASK: Research the top 10 peptides used in longevity, anti-aging, and performance optimization using your training knowledge, then build a complete multi-section website.
++
++BUILD: Create index.html (single file with embedded CSS and JS) with these sections:
++1. Hero — bold headline, tagline, CTA button ('Explore Our Protocols')
++2. About — what Revive Longevity is, the science of peptides for longevity
++3. Top 10 Peptides — for each peptide include: name, what it does, key benefits, and who it's for. Use a card-based grid layout.
++4. How It Works — 3-step process (Consult → Protocol → Transform)
++5. FAQ — at least 5 common questions about peptide therapy
++6. Footer — brand name, tagline, copyright
++
++DESIGN:
++- Dark premium aesthetic (dark navy/black background, gold or cyan accents)
++- Modern clean fonts (use Google Fonts — suggest Inter or Poppins)
++- Fully responsive (mobile-friendly)
++- Smooth scroll, subtle animations on scroll
++- Professional, trustworthy medical/wellness feel
++
++PEPTIDES TO COVER (top 10 for longevity/performance):
++BPC-157, TB-500, Epithalon, Sermorelin, CJC-1295, Ipamorelin, GHK-Cu, SS-31, Humanin, MOTS-c
++
++For each peptide, draw on your knowledge to write accurate, informative descriptions of their mechanisms and benefits.
