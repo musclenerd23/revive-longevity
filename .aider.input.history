@@ -48,3 +48,49 @@
 +BPC-157, TB-500, Epithalon, Sermorelin, CJC-1295, Ipamorelin, GHK-Cu, SS-31, Humanin, MOTS-c
 +
 +For each peptide, draw on your knowledge to write accurate, informative descriptions of their mechanisms and benefits.
+
+# 2026-03-10 23:23:34.941113
++Completely redesign index.html to match the look and feel of vyorawellness.com. Keep all the Revive Longevity content (brand name, top 10 peptides, etc.) but adopt this design style:
++
++DESIGN SYSTEM (inspired by vyorawellness.com):
++- Background: warm cream/off-white (#F5F2E9 and #EBE8DD)
++- Primary dark color: deep teal/charcoal (#253031)
++- Accent: muted sage green or warm teal (#778B8B)
++- Text: dark charcoal on light backgrounds
++- Font: Use 'DM Sans' or 'Instrument Sans' from Google Fonts (closest free alternative to Suisse Intl)
++- Overall feel: clean, minimal, light, airy, premium wellness clinic — NOT dark/techy
++
++LAYOUT CHANGES:
++- Hero: large clean headline, light background, soft imagery placeholder, quiz/CTA button in warm teal
++- Navigation: minimal, light background, logo left, links right
++- Peptide cards: light cards with soft borders, warm background, subtle hover shadows
++- Stats bar: clean horizontal stats strip (members, satisfaction rate, etc.)
++- Testimonials section: add 3 fake testimonials with names, age, location
++- How It Works: clean 3-step with numbered circles in teal
++- FAQ: clean accordion, light styling
++- Footer: dark teal background (#253031) with cream text
++
++FEEL: Think premium wellness spa meets modern medical clinic. Warm, trustworthy, approachable. Like vyorawellness.com but for peptide longevity therapy.
+
+# 2026-03-10 23:23:34.941389
++Completely redesign index.html to match the look and feel of vyorawellness.com. Keep all the Revive Longevity content (brand name, top 10 peptides, etc.) but adopt this design style:
++
++DESIGN SYSTEM (inspired by vyorawellness.com):
++- Background: warm cream/off-white (#F5F2E9 and #EBE8DD)
++- Primary dark color: deep teal/charcoal (#253031)
++- Accent: muted sage green or warm teal (#778B8B)
++- Text: dark charcoal on light backgrounds
++- Font: Use 'DM Sans' or 'Instrument Sans' from Google Fonts (closest free alternative to Suisse Intl)
++- Overall feel: clean, minimal, light, airy, premium wellness clinic — NOT dark/techy
++
++LAYOUT CHANGES:
++- Hero: large clean headline, light background, soft imagery placeholder, quiz/CTA button in warm teal
++- Navigation: minimal, light background, logo left, links right
++- Peptide cards: light cards with soft borders, warm background, subtle hover shadows
++- Stats bar: clean horizontal stats strip (members, satisfaction rate, etc.)
++- Testimonials section: add 3 fake testimonials with names, age, location
++- How It Works: clean 3-step with numbered circles in teal
++- FAQ: clean accordion, light styling
++- Footer: dark teal background (#253031) with cream text
++
++FEEL: Think premium wellness spa meets modern medical clinic. Warm, trustworthy, approachable. Like vyorawellness.com but for peptide longevity therapy.
