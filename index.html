@@ -10,17 +10,18 @@
 
     :root {
       --white:    #ffffff;
-      --off:      #f7f8f6;
-      --off2:     #f0f2ef;
-      --border:   #e4e7e1;
-      --border2:  #d0d4cc;
-      --text:     #111714;
-      --text2:    #3a3f38;
-      --muted:    #6b7169;
-      --green:    #1a6b4a;
-      --green-l:  #22894f;
-      --green-bg: #edf6f1;
-      --green-m:  #c6e6d4;
+      --off:      #f7f7f9;
+      --off2:     #f0f0f4;
+      --border:   #e5e5ea;
+      --border2:  #d0d0d8;
+      --text:     #1a1a2e;
+      --text2:    #3a3a50;
+      --muted:    #6b6b80;
+      --green:    #8b7fad;
+      --green-l:  #7b6e9e;
+      --green-bg: #f3f0f9;
+      --green-m:  #d9d2ed;
+      --charcoal: #1c1c1c;
     }
 
     html { scroll-behavior: smooth; }
@@ -49,7 +50,7 @@
     .nav-links { display: flex; gap: 28px; list-style: none; }
     .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.15s; }
     .nav-links a:hover { color: var(--text); }
-    .nav-pill { background: var(--green); color: #fff; font-size: 0.8rem; font-weight: 600; padding: 8px 18px; border-radius: 100px; }
+    .nav-pill { background: var(--charcoal); color: #fff; font-size: 0.8rem; font-weight: 600; padding: 8px 18px; border-radius: 100px; }
 
     /* ── HERO ── */
     .hero { background: var(--white); padding: 96px 48px 80px; text-align: center; border-bottom: 1px solid var(--border); }
@@ -65,15 +66,15 @@
       letter-spacing: -0.03em; line-height: 1.1; color: var(--text);
       max-width: 780px; margin: 0 auto 24px;
     }
-    .hero h1 em { font-style: normal; color: var(--green); }
+    .hero h1 em { font-style: normal; color: var(--green); font-weight: 300; }
     .hero p { font-size: 1.1rem; color: var(--muted); max-width: 540px; margin: 0 auto 44px; line-height: 1.75; }
     .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
     .btn-green {
-      background: var(--green); color: #fff; font-weight: 600; font-size: 0.92rem;
+      background: var(--charcoal); color: #fff; font-weight: 600; font-size: 0.92rem;
       padding: 14px 30px; border-radius: 100px; text-decoration: none;
       transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
     }
-    .btn-green:hover { background: var(--green-l); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(26,107,74,0.2); }
+    .btn-green:hover { background: #333; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.18); }
     .btn-outline {
       background: transparent; color: var(--text); font-weight: 500; font-size: 0.92rem;
       padding: 14px 30px; border-radius: 100px; text-decoration: none;
@@ -241,11 +242,11 @@
       position: relative;
     }
     .pricing-card:hover { box-shadow: 0 8px 40px rgba(0,0,0,0.09); transform: translateY(-3px); }
-    .pricing-card.featured { border-color: var(--green); }
+    .pricing-card.featured { border-color: var(--charcoal); }
     .pricing-card.featured::before {
       content: 'Most Popular';
       position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
-      background: var(--green); color: #fff;
+      background: var(--charcoal); color: #fff;
       font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
       padding: 5px 16px; border-radius: 100px;
     }
@@ -277,8 +278,8 @@
       transition: background 0.15s, border-color 0.15s;
     }
     .plan-cta:hover { background: var(--off2); border-color: var(--text2); }
-    .pricing-card.featured .plan-cta { background: var(--green); color: #fff; border-color: var(--green); }
-    .pricing-card.featured .plan-cta:hover { background: var(--green-l); }
+    .pricing-card.featured .plan-cta { background: var(--charcoal); color: #fff; border-color: var(--charcoal); }
+    .pricing-card.featured .plan-cta:hover { background: #333; }
 
     /* ── STEPS ── */
     .steps-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 56px; position: relative; }
@@ -307,10 +308,10 @@
     .cs-card p { font-size: 0.78rem; color: var(--border2); }
 
     /* ── CTA ── */
-    .cta-section { background: var(--green); padding: 88px 48px; text-align: center; }
+    .cta-section { background: var(--charcoal); padding: 88px 48px; text-align: center; }
     .cta-section h2 { font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 800; color: #fff; letter-spacing: -0.025em; margin-bottom: 16px; }
-    .cta-section p { font-size: 1rem; color: rgba(255,255,255,0.72); margin-bottom: 36px; max-width: 480px; margin-left: auto; margin-right: auto; }
-    .btn-white { display: inline-block; background: #fff; color: var(--green); font-weight: 700; font-size: 0.92rem; padding: 14px 32px; border-radius: 100px; text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; }
+    .cta-section p { font-size: 1rem; color: rgba(255,255,255,0.6); margin-bottom: 36px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .btn-white { display: inline-block; background: #fff; color: var(--charcoal); font-weight: 700; font-size: 0.92rem; padding: 14px 32px; border-radius: 100px; text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; }
     .btn-white:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.15); }
 
     /* ── FOOTER ── */
@@ -363,7 +364,7 @@
   <!-- HERO -->
   <div class="hero">
     <span class="hero-tag"><span>🌿</span> Sales Playbook — Confidential</span>
-    <h1>The <em>Longevity Therapies</em><br/>Your Clients Are Looking For</h1>
+    <h1><em>Longevity Therapies</em><br/>Your Clients Are Looking For</h1>
     <p>Science-backed, medically supervised treatments delivered to the door. Everything you need to sell with confidence.</p>
     <div class="hero-actions">
       <a href="#products" class="btn-green">View Products →</a>
