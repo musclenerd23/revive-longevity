@@ -288,6 +288,17 @@
     .step-item h4 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
     .step-item p { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
 
+    /* ── STEPS IMAGE ── */
+    .steps-img-wrap {
+      margin-top: 48px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .steps-img-wrap img { width: 100%; display: block; }
+    .steps-3 { grid-template-columns: repeat(3, 1fr); margin-top: 40px; }
+    .steps-3::before { left: 16%; right: 16%; }
+
     /* ── COMING SOON ── */
     .cs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
     .cs-card { background: var(--white); border: 1.5px dashed var(--border2); border-radius: 16px; padding: 36px 24px; text-align: center; }
@@ -318,7 +329,7 @@
       .product-img { min-height: 260px; }
       .product-body { padding: 36px 28px; }
       .why-grid { grid-template-columns: 1fr 1fr; }
-      .steps-row { grid-template-columns: 1fr; gap: 32px; }
+      .steps-row, .steps-3 { grid-template-columns: 1fr; gap: 32px; }
       .steps-row::before { display: none; }
       .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
       .cs-grid { grid-template-columns: 1fr 1fr; }
@@ -482,7 +493,7 @@
           </div>
         </div>
         <div class="lab-img">
-          <img src="Lab_Tested_Medications.jpg" alt="Lab Tested Medications" />
+          <img src="Lab_new.png" alt="Lab Tested Medications" />
         </div>
       </div>
     </div>
@@ -563,13 +574,26 @@
     <div class="container">
       <p class="section-eyebrow">The Process</p>
       <h2 class="section-heading">How It Works for Your Client</h2>
-      <p class="section-body">Walk clients through this five-step journey — from first conversation to real results.</p>
-      <div class="steps-row">
-        <div class="step-item"><div class="step-num">1</div><h4>Consultation</h4><p>Client completes an intake form, reviewed by a licensed provider.</p></div>
-        <div class="step-item"><div class="step-num">2</div><h4>Prescription</h4><p>Provider writes an Rx based on health goals and history.</p></div>
-        <div class="step-item"><div class="step-num">3</div><h4>Compounding</h4><p>Medication compounded at a USA-licensed pharmacy to exact spec.</p></div>
-        <div class="step-item"><div class="step-num">4</div><h4>Home Delivery</h4><p>Full kit ships to the client — everything needed to self-administer.</p></div>
-        <div class="step-item"><div class="step-num">5</div><h4>Results</h4><p>Most clients notice changes within 2–3 weeks of starting.</p></div>
+      <p class="section-body">Three simple steps from sign-up to results.</p>
+      <div class="steps-img-wrap">
+        <img src="3_steps.jpg" alt="How It Works — 3 Steps" />
+      </div>
+      <div class="steps-row steps-3">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <h4>Submit & Meet a Doctor</h4>
+          <p>Complete a quick form and meet with a licensed medical provider 100% online. They'll determine if a personalized treatment plan is right for you.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <h4>Get Medication Delivered</h4>
+          <p>If eligible, your custom prescription is shipped directly to your door — fast and free.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <h4>24/7 Support & Ongoing Care</h4>
+          <p>We're with you every step of the way, with regular check-ins and on-demand medical support to keep you on track.</p>
+        </div>
       </div>
     </div>
   </div>
