@@ -10,17 +10,20 @@
 
     :root {
       --white:    #ffffff;
-      --off:      #f7f7f9;
-      --off2:     #f0f0f4;
-      --border:   #e5e5ea;
-      --border2:  #d0d0d8;
-      --text:     #1a1a2e;
-      --text2:    #3a3a50;
-      --muted:    #6b6b80;
-      --green:    #8b7fad;
-      --green-l:  #7b6e9e;
-      --green-bg: #f3f0f9;
-      --green-m:  #d9d2ed;
+      --off:      #f7f8f6;
+      --off2:     #f0f2ef;
+      --border:   #e5e5e5;
+      --border2:  #d9d9d9;
+      --text:     #1c1c1c;
+      --text2:    #333333;
+      --muted:    #525252;
+      --green:    #219653;
+      --green-l:  #1a7d45;
+      --green-bg: #edf7f1;
+      --green-m:  #b8dfc8;
+      --lavender: #948EC4;
+      --lav-bg:   #f3f2fb;
+      --lav-m:    #d8d5ef;
       --charcoal: #1c1c1c;
     }
 
@@ -56,9 +59,9 @@
     .hero { background: var(--white); padding: 96px 48px 80px; text-align: center; border-bottom: 1px solid var(--border); }
     .hero-tag {
       display: inline-flex; align-items: center; gap: 8px;
-      background: var(--green-bg); color: var(--green);
+      background: var(--lav-bg); color: var(--lavender);
       font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
-      padding: 6px 16px; border-radius: 100px; border: 1px solid var(--green-m); margin-bottom: 32px;
+      padding: 6px 16px; border-radius: 100px; border: 1px solid var(--lav-m); margin-bottom: 32px;
     }
     .hero h1 {
       font-family: 'Bricolage Grotesque', sans-serif;
@@ -66,7 +69,7 @@
       letter-spacing: -0.03em; line-height: 1.1; color: var(--text);
       max-width: 780px; margin: 0 auto 24px;
     }
-    .hero h1 em { font-style: normal; color: var(--green); font-weight: 300; }
+    .hero h1 em { font-style: normal; color: var(--lavender); font-weight: 300; }
     .hero p { font-size: 1.1rem; color: var(--muted); max-width: 540px; margin: 0 auto 44px; line-height: 1.75; }
     .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
     .btn-green {
@@ -86,13 +89,13 @@
       margin-top: 60px; padding-top: 48px; border-top: 1px solid var(--border); flex-wrap: wrap;
     }
     .trust-item { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; font-weight: 500; color: var(--muted); }
-    .trust-item .dot { width: 8px; height: 8px; background: var(--green); border-radius: 50%; flex-shrink: 0; }
+    .trust-item .dot { width: 8px; height: 8px; background: var(--lavender); border-radius: 50%; flex-shrink: 0; }
 
     /* ── SECTIONS ── */
     .section { padding: 96px 48px; }
     .section.alt { background: var(--off); }
     .container { max-width: 1080px; margin: 0 auto; }
-    .section-eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); margin-bottom: 12px; }
+    .section-eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lavender); margin-bottom: 12px; }
     .section-heading { font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.15; color: var(--text); margin-bottom: 14px; }
     .section-body { font-size: 1rem; color: var(--muted); max-width: 520px; line-height: 1.7; }
 
@@ -100,7 +103,7 @@
     .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 52px; }
     .why-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 32px 28px; transition: box-shadow 0.2s, border-color 0.2s; }
     .why-card:hover { border-color: var(--green-m); box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
-    .why-icon { width: 44px; height: 44px; background: var(--green-bg); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 16px; }
+    .why-icon { width: 44px; height: 44px; background: var(--lav-bg); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 16px; }
     .why-card h3 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
     .why-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
 
@@ -124,12 +127,12 @@
     .product-tag {
       position: absolute; top: 18px; left: 18px;
       background: var(--white); border: 1px solid var(--border);
-      color: var(--green); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--lavender); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
       padding: 5px 12px; border-radius: 100px; box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     }
 
     .product-body { padding: 52px 48px; display: flex; flex-direction: column; }
-    .product-cat { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); margin-bottom: 10px; }
+    .product-cat { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lavender); margin-bottom: 10px; }
     .product-body h2 { font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(1.5rem, 2.2vw, 2rem); font-weight: 800; letter-spacing: -0.02em; color: var(--text); margin-bottom: 16px; line-height: 1.2; }
     .product-desc { font-size: 0.93rem; color: var(--muted); line-height: 1.75; margin-bottom: 28px; }
 
@@ -138,8 +141,9 @@
     .check { width: 18px; height: 18px; background: var(--green-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
     .check svg { width: 10px; height: 10px; stroke: var(--green); stroke-width: 2.5; fill: none; }
 
+
     .product-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 24px; }
-    .meta-tag { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-m); font-size: 0.72rem; font-weight: 600; padding: 4px 12px; border-radius: 100px; }
+    .meta-tag { background: var(--lav-bg); color: var(--lavender); border: 1px solid var(--lav-m); font-size: 0.72rem; font-weight: 600; padding: 4px 12px; border-radius: 100px; }
 
     /* ── LAB TESTED ── */
     .lab-banner {
@@ -269,6 +273,7 @@
     .plan-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 36px; flex: 1; }
     .plan-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.875rem; color: var(--text2); line-height: 1.5; }
     .plan-features li .check { width: 18px; height: 18px; background: var(--green-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+
     .plan-features li .check svg { width: 10px; height: 10px; stroke: var(--green); stroke-width: 2.5; fill: none; }
 
     .plan-cta {
@@ -285,7 +290,7 @@
     .steps-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 56px; position: relative; }
     .steps-row::before { content: ''; position: absolute; top: 22px; left: 10%; right: 10%; height: 1px; background: var(--border); }
     .step-item { text-align: center; padding: 0 16px; position: relative; }
-    .step-num { width: 44px; height: 44px; background: var(--white); border: 2px solid var(--green-m); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--green); margin: 0 auto 20px; position: relative; z-index: 1; }
+    .step-num { width: 44px; height: 44px; background: var(--white); border: 2px solid var(--lav-m); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--lavender); margin: 0 auto 20px; position: relative; z-index: 1; }
     .step-item h4 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
     .step-item p { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
 
