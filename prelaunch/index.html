@@ -4,28 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Revive Longevity — Sales Overview</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
       --white:    #ffffff;
-      --off:      #f7f8f6;
-      --off2:     #f0f2ef;
-      --border:   #e5e5e5;
-      --border2:  #d9d9d9;
-      --text:     #1c1c1c;
-      --text2:    #333333;
-      --muted:    #525252;
+      --off:      #f3f0ea;
+      --off2:     #ede9e0;
+      --border:   #e5e0d6;
+      --border2:  #d6cfc4;
+      --text:     #1a1f3a;
+      --text2:    #2a2f4a;
+      --muted:    #6b7280;
       --green:    #219653;
       --green-l:  #1a7d45;
       --green-bg: #edf7f1;
       --green-m:  #b8dfc8;
-      --lavender: #948EC4;
-      --lav-bg:   #f3f2fb;
-      --lav-m:    #d8d5ef;
-      --charcoal: #1c1c1c;
-      --page-bg:  #f0f0f6;
+      --lavender: #c9922d;
+      --lav-bg:   #fdf6ec;
+      --lav-m:    #f0d9b0;
+      --charcoal: #1a1f3a;
+      --page-bg:  #faf9f7;
+      --gold:     #c9922d;
+      --gold-l:   #e0a83a;
+      --cream:    #faf9f7;
     }
 
     html { scroll-behavior: smooth; }
@@ -49,7 +52,7 @@
     }
     .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .nav-logo img { height: 32px; width: auto; border-radius: 5px; }
-    .nav-logo span { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--text); }
+    .nav-logo span { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.05rem; color: var(--text); }
     .nav-right { display: flex; align-items: center; gap: 24px; }
     .nav-links { display: flex; gap: 28px; list-style: none; }
     .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.15s; }
@@ -65,27 +68,24 @@
       padding: 6px 16px; border-radius: 100px; border: 1px solid var(--lav-m); margin-bottom: 32px;
     }
     .hero h1 {
-      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Playfair Display', serif;
       font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 800;
       letter-spacing: -0.03em; line-height: 1.1; color: var(--text);
       max-width: 780px; margin: 0 auto 24px;
     }
     .hero h1 em {
-      font-style: normal;
-      font-weight: 800;
-      background: linear-gradient(135deg, #f472b6, #948EC4);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--gold);
+      font-style: italic;
+      font-weight: 400;
     }
     .hero p { font-size: 1.1rem; color: var(--muted); max-width: 540px; margin: 0 auto 44px; line-height: 1.75; }
     .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
     .btn-green {
-      background: linear-gradient(135deg, #f472b6, #948EC4); color: #fff; font-weight: 600; font-size: 0.92rem;
+      background: var(--gold); color: #fff; font-weight: 600; font-size: 0.92rem;
       padding: 14px 30px; border-radius: 100px; text-decoration: none;
-      transition: opacity 0.15s, transform 0.15s, box-shadow 0.15s;
+      transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
     }
-    .btn-green:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.18); }
+    .btn-green:hover { background: var(--gold-l); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.18); }
     .btn-outline {
       background: transparent; color: var(--text); font-weight: 500; font-size: 0.92rem;
       padding: 14px 30px; border-radius: 100px; text-decoration: none;
@@ -101,10 +101,10 @@
 
     /* ── SECTIONS ── */
     .section { padding: 96px 48px; }
-    .section.alt { background: #e8e8f2; }
+    .section.alt { background: var(--off); }
     .container { max-width: 1080px; margin: 0 auto; }
     .section-eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lavender); margin-bottom: 12px; }
-    .section-heading { font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.15; color: var(--text); margin-bottom: 14px; }
+    .section-heading { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.15; color: var(--text); margin-bottom: 14px; }
     .section-body { font-size: 1rem; color: var(--muted); max-width: 520px; line-height: 1.7; }
 
     /* ── WHY GRID ── */
@@ -112,7 +112,7 @@
     .why-card { background: #ffffff; border: 1px solid var(--border); border-radius: 20px; padding: 32px 28px; transition: box-shadow 0.2s, border-color 0.2s; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
     .why-card:hover { border-color: var(--green-m); box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
     .why-icon { width: 44px; height: 44px; background: var(--lav-bg); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 16px; }
-    .why-card h3 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .why-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
     .why-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
 
     /* ── PRODUCT CARDS ── */
@@ -142,7 +142,7 @@
 
     .product-body { padding: 52px 48px; display: flex; flex-direction: column; }
     .product-cat { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lavender); margin-bottom: 10px; }
-    .product-body h2 { font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(1.5rem, 2.2vw, 2rem); font-weight: 800; letter-spacing: -0.02em; color: var(--text); margin-bottom: 16px; line-height: 1.2; }
+    .product-body h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 2.2vw, 2rem); font-weight: 800; letter-spacing: -0.02em; color: var(--text); margin-bottom: 16px; line-height: 1.2; }
     .product-desc { font-size: 0.93rem; color: var(--muted); line-height: 1.75; margin-bottom: 28px; }
 
     .benefit-list { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-bottom: 32px; }
@@ -182,7 +182,7 @@
     }
 
     .lab-text h2 {
-      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Playfair Display', serif;
       font-size: clamp(1.5rem, 2.5vw, 2.1rem);
       font-weight: 800;
       color: #fff;
@@ -245,7 +245,7 @@
     }
 
     /* ── PRICING SECTION ── */
-    .pricing-section { background: #e8e8f2; padding: 96px 48px; }
+    .pricing-section { background: var(--off); padding: 96px 48px; }
     .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
 
     .pricing-card {
@@ -265,7 +265,7 @@
       padding: 5px 16px; border-radius: 100px;
     }
 
-    .plan-name { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .plan-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
     .plan-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; margin-bottom: 28px; }
 
     .plan-price {
@@ -274,7 +274,7 @@
       border-bottom: 1px solid var(--border);
     }
     .plan-price .amount {
-      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Playfair Display', serif;
       font-size: 3rem; font-weight: 800; color: var(--text); line-height: 1;
     }
     .plan-price .amount.tbd { font-size: 1.6rem; color: var(--muted); }
@@ -288,12 +288,12 @@
 
     .plan-cta {
       display: block; text-align: center;
-      background: linear-gradient(135deg, #f472b6, #948EC4); color: #fff;
+      background: var(--gold); color: #fff;
       font-weight: 600; font-size: 0.9rem; padding: 14px; border-radius: 100px;
       text-decoration: none; border: none;
-      transition: opacity 0.15s;
+      transition: background 0.15s;
     }
-    .plan-cta:hover { opacity: 0.9; }
+    .plan-cta:hover { background: var(--gold-l); }
     .pricing-card.featured .plan-cta { background: var(--charcoal); color: #fff; }
     .pricing-card.featured .plan-cta:hover { opacity: 0.85; }
 
@@ -301,8 +301,8 @@
     .steps-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 56px; position: relative; }
     .steps-row::before { content: ''; position: absolute; top: 22px; left: 10%; right: 10%; height: 1px; background: var(--border); }
     .step-item { text-align: center; padding: 0 16px; position: relative; }
-    .step-num { width: 44px; height: 44px; background: var(--white); border: 2px solid var(--lav-m); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--lavender); margin: 0 auto 20px; position: relative; z-index: 1; }
-    .step-item h4 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .step-num { width: 44px; height: 44px; background: var(--white); border: 2px solid var(--lav-m); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 0.95rem; color: var(--lavender); margin: 0 auto 20px; position: relative; z-index: 1; }
+    .step-item h4 { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
     .step-item p { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
 
     /* ── STEPS IMAGE ── */
@@ -320,19 +320,19 @@
     .cs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
     .cs-card { background: var(--white); border: 1.5px dashed var(--border2); border-radius: 16px; padding: 36px 24px; text-align: center; }
     .cs-card .cs-icon { font-size: 1.8rem; margin-bottom: 12px; opacity: 0.4; }
-    .cs-card h4 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--muted); margin-bottom: 4px; }
+    .cs-card h4 { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; color: var(--muted); margin-bottom: 4px; }
     .cs-card p { font-size: 0.78rem; color: var(--border2); }
 
     /* ── CTA ── */
     .cta-section { background: var(--charcoal); padding: 88px 48px; text-align: center; }
-    .cta-section h2 { font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 800; color: #fff; letter-spacing: -0.025em; margin-bottom: 16px; }
+    .cta-section h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 800; color: #fff; letter-spacing: -0.025em; margin-bottom: 16px; }
     .cta-section p { font-size: 1rem; color: rgba(255,255,255,0.6); margin-bottom: 36px; max-width: 480px; margin-left: auto; margin-right: auto; }
     .btn-white { display: inline-block; background: #fff; color: var(--charcoal); font-weight: 700; font-size: 0.92rem; padding: 14px 32px; border-radius: 100px; text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; }
     .btn-white:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.15); }
 
     /* ── FOOTER ── */
     footer { background: var(--text); padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-    footer .footer-logo { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 0.95rem; color: rgba(255,255,255,0.6); }
+    footer .footer-logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 0.95rem; color: rgba(255,255,255,0.6); }
     footer p { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
 
     /* ── RESPONSIVE ── */
@@ -527,72 +527,6 @@
       </div>
 
 
-    </div>
-  </div>
-
-  <!-- LAB TESTED -->
-  <div class="section" id="lab-tested" style="background:#fff;text-align:center;">
-    <div class="container">
-      <h2 class="section-heading" style="font-size:clamp(2rem,4vw,3rem);margin-bottom:16px;">
-        Quality <em style="font-style:normal;color:var(--lavender);font-weight:300;">tested.</em>
-      </h2>
-      <p style="color:var(--muted);max-width:560px;margin:0 auto 52px;line-height:1.7;">
-        Every medication is prepared in a state-licensed pharmacy, independently verified in FDA- and DEA-registered labs, and delivered to your door exactly when you need it.
-      </p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:760px;margin:0 auto 44px;">
-        <div style="background:#ffffff;border:1px solid #e5e5e5;border-radius:16px;padding:28px 24px;text-align:left;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
-            <span style="font-weight:700;font-size:0.95rem;color:var(--text);">Potency test</span>
-            <span style="background:#edf7f1;color:#219653;font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:100px;white-space:nowrap;">● Passed</span>
-          </div>
-          <p style="font-size:0.85rem;color:var(--muted);line-height:1.6;">Confirmed every 3–6 months to stay within ± 10% of the target strength.</p>
-        </div>
-        <div style="background:#ffffff;border:1px solid #e5e5e5;border-radius:16px;padding:28px 24px;text-align:left;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
-            <span style="font-weight:700;font-size:0.95rem;color:var(--text);">Sterility test</span>
-            <span style="background:#edf7f1;color:#219653;font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:100px;white-space:nowrap;">● Passed</span>
-          </div>
-          <p style="font-size:0.85rem;color:var(--muted);line-height:1.6;">Screened for bacteria, fungi, and other contaminants to meet USP 797 standards.</p>
-        </div>
-        <div style="background:#ffffff;border:1px solid #e5e5e5;border-radius:16px;padding:28px 24px;text-align:left;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
-            <span style="font-weight:700;font-size:0.95rem;color:var(--text);">Endotoxicity test</span>
-            <span style="background:#edf7f1;color:#219653;font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:100px;white-space:nowrap;">● Passed</span>
-          </div>
-          <p style="font-size:0.85rem;color:var(--muted);line-height:1.6;">Checked to USP 85 limits to ensure zero harmful bacterial toxins.</p>
-        </div>
-        <div style="background:#ffffff;border:1px solid #e5e5e5;border-radius:16px;padding:28px 24px;text-align:left;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
-            <span style="font-weight:700;font-size:0.95rem;color:var(--text);">pH test</span>
-            <span style="background:#edf7f1;color:#219653;font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:100px;white-space:nowrap;">● Passed</span>
-          </div>
-          <p style="font-size:0.85rem;color:var(--muted);line-height:1.6;">Fine-tuned for a smooth, irritation-free injection every time.</p>
-        </div>
-      </div>
-      <a href="https://revivelongevity.com" style="display:inline-flex;align-items:center;gap:10px;background:var(--charcoal);color:#fff;font-weight:600;font-size:0.92rem;padding:14px 30px;border-radius:100px;text-decoration:none;">
-        Get Started →
-      </a>
-    </div>
-  </div>
-
-  <!-- COMPLIANCE STRIP -->
-  <div style="background:#fff;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:28px 48px;">
-    <div style="max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;">
-      <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;font-weight:600;color:#525252;">
-        <span style="font-size:1.2rem;">🔒</span> HIPAA Compliant
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;font-weight:600;color:#525252;">
-        <span style="font-size:1.2rem;">✅</span> LegitScript Certified
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;font-weight:600;color:#525252;">
-        <span style="font-size:1.2rem;">🏛️</span> State-Licensed Pharmacies
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;font-weight:600;color:#525252;">
-        <span style="font-size:1.2rem;">👨‍⚕️</span> U.S. Board-Certified Physicians
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;font-weight:600;color:#525252;">
-        <span style="font-size:1.2rem;">🧪</span> Third-Party Lab Tested
-      </div>
     </div>
   </div>
 
