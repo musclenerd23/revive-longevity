@@ -4,265 +4,277 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Revive Longevity — Coming Soon</title>
+  <meta name="description" content="Optimized by science, prescribed by physicians. U.S. Doctors. U.S. Pharmacies. Full panel bloodwork. Launching soon." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --green: #219653;
-      --green-l: #1a7d45;
-      --green-bg: #edf7f1;
-      --text: #1c1c1c;
-      --muted: #525252;
-      --border: #e5e5e5;
+      --white:    #ffffff;
+      --off:      #f7f8f6;
+      --border:   #e5e5e5;
+      --text:     #1c1c1c;
+      --muted:    #525252;
+      --lavender: #948EC4;
+      --lav-bg:   #f3f2fb;
+      --lav-m:    #d8d5ef;
+      --charcoal: #1c1c1c;
     }
 
-    html, body {
-      min-height: 100vh;
-      font-family: 'Inter', sans-serif;
-      background: #fff;
-      color: var(--text);
-    }
-
+    html { height: 100%; }
     body {
+      min-height: 100vh;
+      background: var(--white);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── NAV ── */
+    nav {
+      padding: 0 48px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .nav-logo span { color: var(--lavender); }
+
+    /* ── MAIN ── */
+    main {
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      padding: 40px 24px;
       text-align: center;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 56px;
-    }
-
-    .logo-mark {
-      width: 44px;
-      height: 44px;
-      background: var(--green);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .logo-mark svg {
-      width: 24px;
-      height: 24px;
-      fill: none;
-      stroke: #fff;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .logo-text {
-      font-family: 'Bricolage Grotesque', sans-serif;
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: -0.02em;
+      padding: 80px 24px;
     }
 
     .badge {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      background: var(--green-bg);
-      color: var(--green);
-      font-size: 13px;
+      gap: 8px;
+      background: var(--lav-bg);
+      color: var(--lavender);
+      font-size: 0.75rem;
       font-weight: 600;
-      padding: 6px 14px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 16px;
       border-radius: 100px;
-      margin-bottom: 28px;
-      letter-spacing: 0.02em;
+      border: 1px solid var(--lav-m);
+      margin-bottom: 36px;
     }
-
     .badge-dot {
-      width: 6px;
-      height: 6px;
+      width: 6px; height: 6px;
+      background: var(--lavender);
       border-radius: 50%;
-      background: var(--green);
-      animation: pulse 2s infinite;
+      animation: pulse 2s ease-in-out infinite;
     }
-
     @keyframes pulse {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.85); }
+      50% { opacity: 0.5; transform: scale(0.8); }
     }
 
     h1 {
       font-family: 'Bricolage Grotesque', sans-serif;
-      font-size: clamp(36px, 6vw, 64px);
+      font-size: clamp(2.8rem, 6vw, 5rem);
       font-weight: 800;
-      color: var(--text);
       letter-spacing: -0.04em;
-      line-height: 1.08;
-      margin-bottom: 20px;
-      max-width: 700px;
+      line-height: 1.05;
+      color: var(--text);
+      max-width: 720px;
+      margin-bottom: 28px;
+    }
+    h1 em {
+      font-style: normal;
+      color: var(--lavender);
+      font-weight: 300;
     }
 
-    h1 span {
-      color: var(--green);
-    }
-
-    p.sub {
-      font-size: clamp(16px, 2vw, 19px);
+    .subtitle {
+      font-size: 1.05rem;
       color: var(--muted);
-      line-height: 1.7;
-      max-width: 520px;
-      margin: 0 auto 48px auto;
+      max-width: 500px;
+      line-height: 1.8;
+      margin-bottom: 52px;
     }
 
-    .form {
+    /* ── EMAIL FORM ── */
+    .form-wrap {
       display: flex;
       gap: 10px;
-      max-width: 440px;
-      width: 100%;
-      margin: 0 auto 16px auto;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 12px;
     }
-
-    .form input {
-      flex: 1;
-      padding: 14px 18px;
+    .form-wrap input {
+      width: 300px;
+      padding: 14px 22px;
       border: 1.5px solid var(--border);
-      border-radius: 10px;
-      font-size: 15px;
+      border-radius: 100px;
+      font-size: 0.92rem;
       font-family: 'Inter', sans-serif;
       color: var(--text);
       outline: none;
-      transition: border-color 0.2s;
-      background: #fff;
+      transition: border-color 0.15s;
     }
-
-    .form input:focus {
-      border-color: var(--green);
-    }
-
-    .form input::placeholder {
-      color: #aaa;
-    }
-
-    .form button {
-      padding: 14px 24px;
-      background: var(--green);
+    .form-wrap input:focus { border-color: var(--lavender); }
+    .form-wrap input::placeholder { color: #bbb; }
+    .btn-primary {
+      background: var(--charcoal);
       color: #fff;
-      border: none;
-      border-radius: 10px;
-      font-size: 15px;
       font-weight: 600;
+      font-size: 0.92rem;
       font-family: 'Inter', sans-serif;
+      padding: 14px 28px;
+      border-radius: 100px;
+      border: none;
       cursor: pointer;
-      white-space: nowrap;
-      transition: background 0.2s;
+      transition: background 0.15s, transform 0.15s;
     }
-
-    .form button:hover {
-      background: var(--green-l);
-    }
-
+    .btn-primary:hover { background: #333; transform: translateY(-1px); }
+    .btn-primary:disabled { background: #555; cursor: default; transform: none; }
     .form-note {
-      font-size: 13px;
-      color: #aaa;
+      font-size: 0.78rem;
+      color: #bbb;
       margin-bottom: 56px;
     }
 
+    /* ── PILLARS ── */
     .pillars {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       justify-content: center;
       flex-wrap: wrap;
-      margin-bottom: 64px;
+      margin-bottom: 56px;
     }
-
     .pillar {
       display: flex;
       align-items: center;
       gap: 7px;
-      background: #f7f8f6;
+      background: var(--off);
       border: 1px solid var(--border);
       border-radius: 100px;
       padding: 8px 16px;
-      font-size: 13px;
+      font-size: 0.82rem;
       font-weight: 500;
       color: var(--muted);
     }
 
-    .pillar-icon {
-      font-size: 15px;
+    /* ── TRUST ── */
+    .trust {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      max-width: 680px;
+      width: 100%;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--muted);
+    }
+    .trust-item .dot {
+      width: 6px; height: 6px;
+      background: var(--lavender);
+      border-radius: 50%;
+      flex-shrink: 0;
     }
 
+    /* ── FOOTER ── */
     footer {
-      font-size: 13px;
+      text-align: center;
+      padding: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.78rem;
       color: #bbb;
     }
 
-    @media (max-width: 480px) {
-      .form {
-        flex-direction: column;
-      }
-      .form button {
-        width: 100%;
-      }
+    @media (max-width: 600px) {
+      nav { padding: 0 24px; }
+      .form-wrap input { width: 100%; max-width: 320px; }
     }
   </style>
 </head>
 <body>
 
-  <div class="logo">
-    <div class="logo-mark">
-      <svg viewBox="0 0 24 24">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-        <path d="M8 12c0-2.21 1.79-4 4-4s4 1.79 4 4-1.79 4-4 4"/>
-        <line x1="12" y1="8" x2="12" y2="2"/>
-        <line x1="12" y1="16" x2="12" y2="22"/>
-      </svg>
+  <nav>
+    <a class="nav-logo" href="#">Revive <span>Longevity</span></a>
+  </nav>
+
+  <main>
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Launching Soon
     </div>
-    <span class="logo-text">Revive Longevity</span>
-  </div>
 
-  <div class="badge">
-    <span class="badge-dot"></span>
-    Launching Soon
-  </div>
+    <h1>Longevity Medicine,<br/><em>Done Right.</em></h1>
 
-  <h1>Optimize your hormones.<br /><span>Extend your prime.</span></h1>
+    <p class="subtitle">
+      U.S. Doctors. U.S. Pharmacies. Full Panel Bloodwork.<br/>
+      Optimized by science, prescribed by physicians — delivered to your door.
+    </p>
 
-  <p class="sub">
-    Concierge telehealth for TRT, peptide therapy, and personalized longevity protocols — delivered nationwide by board-certified providers.
-  </p>
+    <div class="form-wrap">
+      <input type="email" id="email-input" placeholder="Enter your email for early access" />
+      <button class="btn-primary" onclick="handleSubmit()">Notify Me →</button>
+    </div>
+    <p class="form-note">Be first in line. No spam, ever.</p>
 
-  <form class="form" onsubmit="handleSubmit(event)">
-    <input type="email" id="email-input" placeholder="Enter your email" required />
-    <button type="submit">Notify Me</button>
-  </form>
+    <div class="pillars">
+      <div class="pillar">💪 Testosterone Optimization</div>
+      <div class="pillar">🧬 Peptide Therapy</div>
+      <div class="pillar">⚡ GLP-1 &amp; Weight Loss</div>
+      <div class="pillar">🔬 NAD+ &amp; Anti-Aging</div>
+      <div class="pillar">📍 All 50 States</div>
+    </div>
 
-  <p class="form-note">Be first in line. No spam, ever.</p>
-
-  <div class="pillars">
-    <div class="pillar"><span class="pillar-icon">💪</span> Testosterone Optimization</div>
-    <div class="pillar"><span class="pillar-icon">🧬</span> Peptide Therapy</div>
-    <div class="pillar"><span class="pillar-icon">⚡</span> GLP-1 &amp; Weight Loss</div>
-    <div class="pillar"><span class="pillar-icon">🔬</span> Lab-Tested Protocols</div>
-    <div class="pillar"><span class="pillar-icon">📍</span> All 50 States</div>
-  </div>
+    <div class="trust">
+      <div class="trust-item"><span class="dot"></span>HIPAA Compliant</div>
+      <div class="trust-item"><span class="dot"></span>LegitScript Certified</div>
+      <div class="trust-item"><span class="dot"></span>State-Licensed Pharmacies</div>
+      <div class="trust-item"><span class="dot"></span>U.S. Board-Certified Physicians</div>
+      <div class="trust-item"><span class="dot"></span>Third-Party Lab Tested</div>
+    </div>
+  </main>
 
   <footer>© 2026 Revive Longevity. All rights reserved.</footer>
 
   <script>
-    function handleSubmit(e) {
-      e.preventDefault();
+    function handleSubmit() {
       const input = document.getElementById('email-input');
-      const btn = e.target.querySelector('button');
-      btn.textContent = '✓ You\'re on the list';
-      btn.style.background = '#1a7d45';
-      input.disabled = true;
+      const btn = document.querySelector('.btn-primary');
+      if (!input.value || !input.value.includes('@')) {
+        input.focus();
+        input.style.borderColor = '#e05'; 
+        setTimeout(() => input.style.borderColor = '', 1500);
+        return;
+      }
+      btn.textContent = '✓ You\'re on the list!';
       btn.disabled = true;
+      input.disabled = true;
     }
   </script>
 
