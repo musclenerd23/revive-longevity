@@ -4,281 +4,327 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Revive Longevity — Coming Soon</title>
-  <meta name="description" content="Optimized by science, prescribed by physicians. U.S. Doctors. U.S. Pharmacies. Full panel bloodwork. Launching soon." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <meta name="description" content="The future of human optimization is almost here. Where cutting-edge science meets timeless vitality." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --white:    #ffffff;
-      --off:      #f7f8f6;
-      --border:   #e5e5e5;
-      --text:     #1c1c1c;
-      --muted:    #525252;
-      --lavender: #948EC4;
-      --lav-bg:   #f3f2fb;
-      --lav-m:    #d8d5ef;
-      --charcoal: #1c1c1c;
-      --page-bg:  #f0f0f6;
+      --cream:    #faf9f7;
+      --cream2:   #f3f0ea;
+      --navy:     #1a1f3a;
+      --gold:     #c9922d;
+      --gold-l:   #e0a83a;
+      --muted:    #6b7280;
+      --border:   #e5e0d6;
+      --card-bg:  #ffffff;
     }
 
-    html { height: 100%; }
+    html, body {
+      height: 100%;
+    }
+
     body {
       min-height: 100vh;
-      background: var(--page-bg);
-      color: var(--text);
+      background-color: var(--cream);
+      color: var(--navy);
       font-family: 'Inter', sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* ── NAV ── */
-    nav {
-      padding: 0 48px;
-      height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo {
-      font-family: 'Bricolage Grotesque', sans-serif;
-      font-weight: 800;
-      font-size: 1.15rem;
-      color: var(--text);
-      text-decoration: none;
-      letter-spacing: -0.02em;
-    }
-    .nav-logo span { color: var(--lavender); }
-
-    /* ── MAIN ── */
-    main {
-      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 80px 24px;
+      padding: 48px 24px;
+      position: relative;
+      overflow-x: hidden;
     }
 
-    .badge {
-      display: inline-flex;
+    /* ── BACKGROUND DIAMOND SHAPES ── */
+    .bg-shapes {
+      position: fixed;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 8px;
-      background: var(--lav-bg);
-      color: var(--lavender);
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 6px 16px;
-      border-radius: 100px;
-      border: 1px solid var(--lav-m);
-      margin-bottom: 36px;
+      justify-content: center;
+      gap: 0;
     }
-    .badge-dot {
-      width: 6px; height: 6px;
-      background: var(--lavender);
+    .diamond {
+      width: 260px;
+      height: 90px;
+      border: 1px solid rgba(201,146,45,0.18);
       border-radius: 50%;
-      animation: pulse 2s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.8); }
+      transform: rotate(0deg);
+      flex-shrink: 0;
+      margin: -12px 0;
     }
 
-    h1 {
-      font-family: 'Bricolage Grotesque', sans-serif;
-      font-size: clamp(2.8rem, 6vw, 5rem);
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      line-height: 1.05;
-      color: var(--text);
-      max-width: 720px;
+    /* ── CONTENT ── */
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+      width: 100%;
+    }
+
+    /* ── LOGO ── */
+    .logo-wrap {
+      display: flex;
+      justify-content: center;
       margin-bottom: 28px;
     }
-    h1 em {
-      font-style: normal;
-      font-weight: 300;
-      background: linear-gradient(135deg, #f472b6, #948EC4);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    .logo-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--cream2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
     }
 
-    .subtitle {
-      font-size: 1.05rem;
+    /* ── BADGE ── */
+    .badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+
+    /* ── HEADLINE ── */
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      line-height: 1.05;
+      margin-bottom: 28px;
+    }
+    h1 .revive {
+      display: block;
+      font-weight: 800;
+      font-style: normal;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+    h1 .longevity {
+      display: block;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--gold);
+      letter-spacing: -0.01em;
+    }
+
+    /* ── SUBTEXT ── */
+    .subtext {
+      font-size: 1rem;
       color: var(--muted);
-      max-width: 500px;
+      line-height: 1.75;
+      margin-bottom: 44px;
+      font-weight: 400;
+    }
+
+    /* ── COUNTDOWN ── */
+    .countdown {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 44px;
+      flex-wrap: wrap;
+    }
+    .countdown-unit {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 22px 14px;
+      min-width: 80px;
+    }
+    .countdown-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .countdown-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── TAGLINE ── */
+    .tagline {
+      font-size: 0.95rem;
+      color: var(--muted);
       line-height: 1.8;
-      margin-bottom: 52px;
+      margin-bottom: 44px;
     }
 
     /* ── EMAIL FORM ── */
     .form-wrap {
       display: flex;
       gap: 10px;
-      flex-wrap: wrap;
       justify-content: center;
-      margin-bottom: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 44px;
     }
     .form-wrap input {
-      width: 300px;
-      padding: 14px 22px;
+      width: 280px;
+      padding: 13px 20px;
       border: 1.5px solid var(--border);
       border-radius: 100px;
-      font-size: 0.92rem;
+      font-size: 0.88rem;
       font-family: 'Inter', sans-serif;
-      color: var(--text);
+      color: var(--navy);
+      background: var(--card-bg);
       outline: none;
       transition: border-color 0.15s;
     }
-    .form-wrap input:focus { border-color: var(--lavender); }
+    .form-wrap input:focus { border-color: var(--gold); }
     .form-wrap input::placeholder { color: #bbb; }
-    .btn-primary {
-      background: linear-gradient(135deg, #f472b6, #948EC4);
+    .btn-gold {
+      background: var(--gold);
       color: #fff;
       font-weight: 600;
-      font-size: 0.92rem;
+      font-size: 0.88rem;
       font-family: 'Inter', sans-serif;
-      padding: 14px 28px;
+      padding: 13px 26px;
       border-radius: 100px;
       border: none;
       cursor: pointer;
-      transition: opacity 0.15s, transform 0.15s;
+      transition: background 0.15s, transform 0.1s;
     }
-    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
-    .btn-primary:disabled { background: #555; cursor: default; transform: none; }
-    .form-note {
-      font-size: 0.78rem;
-      color: #bbb;
-      margin-bottom: 56px;
-    }
-
-    /* ── PILLARS ── */
-    .pillars {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 56px;
-    }
-    .pillar {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 8px 16px;
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--muted);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-
-    /* ── TRUST ── */
-    .trust {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 28px;
-      flex-wrap: wrap;
-      padding-top: 40px;
-      border-top: 1px solid var(--border);
-      max-width: 680px;
-      width: 100%;
-    }
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 0.78rem;
-      font-weight: 500;
-      color: var(--muted);
-    }
-    .trust-item .dot {
-      width: 6px; height: 6px;
-      background: var(--lavender);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
+    .btn-gold:hover { background: var(--gold-l); transform: translateY(-1px); }
+    .btn-gold:disabled { opacity: 0.7; cursor: default; transform: none; }
 
     /* ── FOOTER ── */
     footer {
-      text-align: center;
-      padding: 24px;
-      border-top: 1px solid var(--border);
-      font-size: 0.78rem;
+      position: relative;
+      z-index: 1;
+      margin-top: 16px;
+      font-size: 0.75rem;
       color: #bbb;
     }
 
-    @media (max-width: 600px) {
-      nav { padding: 0 24px; }
-      .form-wrap input { width: 100%; max-width: 320px; }
+    @media (max-width: 480px) {
+      .form-wrap input { width: 100%; max-width: 300px; }
+      .countdown-unit { min-width: 64px; padding: 14px 14px 10px; }
+      .countdown-num { font-size: 1.6rem; }
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a class="nav-logo" href="#">Revive <span>Longevity</span></a>
-  </nav>
+  <!-- Background decorative diamonds -->
+  <div class="bg-shapes">
+    <div class="diamond"></div>
+    <div class="diamond"></div>
+    <div class="diamond"></div>
+    <div class="diamond"></div>
+    <div class="diamond"></div>
+    <div class="diamond"></div>
+    <div class="diamond"></div>
+    <div class="diamond"></div>
+  </div>
 
-  <main>
-    <div class="badge">
-      <span class="badge-dot"></span>
-      Launching Soon
+  <div class="content">
+
+    <div class="logo-wrap">
+      <div class="logo-icon">✦</div>
     </div>
 
-    <h1>Longevity Medicine,<br/><em>Done Right.</em></h1>
+    <p class="badge">Coming Soon</p>
 
-    <p class="subtitle">
-      Not Just Peptides.<br/>
-      🇺🇸 Doctors. 🇺🇸 Pharmacies.<br/>
-      Full Panel Bloodwork. Zero Guesswork.
+    <h1>
+      <span class="revive">Revive</span>
+      <span class="longevity">Longevity</span>
+    </h1>
+
+    <p class="subtext">
+      The future of human optimization is almost here.<br/>
+      Where cutting-edge science meets timeless vitality.
+    </p>
+
+    <div class="countdown">
+      <div class="countdown-unit">
+        <span class="countdown-num" id="cd-days">--</span>
+        <span class="countdown-label">Days</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-num" id="cd-hours">--</span>
+        <span class="countdown-label">Hours</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-num" id="cd-mins">--</span>
+        <span class="countdown-label">Minutes</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-num" id="cd-secs">--</span>
+        <span class="countdown-label">Seconds</span>
+      </div>
+    </div>
+
+    <p class="tagline">
+      Personalized longevity.<br/>
+      Concierge care built entirely around you.
     </p>
 
     <div class="form-wrap">
       <input type="email" id="email-input" placeholder="Enter your email for early access" />
-      <button class="btn-primary" onclick="handleSubmit()">Notify Me →</button>
-    </div>
-    <p class="form-note">Be first in line. No spam, ever.</p>
-
-    <div class="pillars">
-      <div class="pillar">💪 Testosterone Optimization</div>
-      <div class="pillar">🧬 Peptide Therapy</div>
-      <div class="pillar">⚡ GLP-1 &amp; Weight Loss</div>
-      <div class="pillar">🔬 NAD+ &amp; Anti-Aging</div>
-      <div class="pillar">📍 All 50 States</div>
+      <button class="btn-gold" onclick="handleSubmit()">Notify Me</button>
     </div>
 
-    <div class="trust">
-      <div class="trust-item"><span class="dot"></span>HIPAA Compliant</div>
-      <div class="trust-item"><span class="dot"></span>LegitScript Certified</div>
-      <div class="trust-item"><span class="dot"></span>State-Licensed Pharmacies</div>
-      <div class="trust-item"><span class="dot"></span>U.S. Board-Certified Physicians</div>
-      <div class="trust-item"><span class="dot"></span>Third-Party Lab Tested</div>
-    </div>
-  </main>
+  </div>
 
   <footer>© 2026 Revive Longevity. All rights reserved.</footer>
 
   <script>
+    // Countdown — launch date April 24, 2026
+    const launch = new Date('2026-04-24T00:00:00');
+    function tick() {
+      const now = new Date();
+      const diff = launch - now;
+      if (diff <= 0) {
+        document.getElementById('cd-days').textContent = '00';
+        document.getElementById('cd-hours').textContent = '00';
+        document.getElementById('cd-mins').textContent = '00';
+        document.getElementById('cd-secs').textContent = '00';
+        return;
+      }
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      document.getElementById('cd-days').textContent  = String(d).padStart(2,'0');
+      document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+      document.getElementById('cd-mins').textContent  = String(m).padStart(2,'0');
+      document.getElementById('cd-secs').textContent  = String(s).padStart(2,'0');
+    }
+    tick();
+    setInterval(tick, 1000);
+
     function handleSubmit() {
       const input = document.getElementById('email-input');
-      const btn = document.querySelector('.btn-primary');
-      if (!input.value || !input.value.includes('@')) {
+      const btn = document.querySelector('.btn-gold');
+      if (!input.value.includes('@')) {
         input.focus();
-        input.style.borderColor = '#e05'; 
+        input.style.borderColor = '#e05';
         setTimeout(() => input.style.borderColor = '', 1500);
         return;
       }
-      btn.textContent = '✓ You\'re on the list!';
+      btn.textContent = "✓ You're on the list!";
       btn.disabled = true;
       input.disabled = true;
     }
