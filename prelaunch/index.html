@@ -25,11 +25,12 @@
       --lav-bg:   #f3f2fb;
       --lav-m:    #d8d5ef;
       --charcoal: #1c1c1c;
+      --page-bg:  #f0f0f6;
     }
 
     html { scroll-behavior: smooth; }
     body {
-      background: var(--white);
+      background: var(--page-bg);
       color: var(--text);
       font-family: 'Inter', sans-serif;
       font-size: 16px;
@@ -56,7 +57,7 @@
     .nav-pill { background: var(--charcoal); color: #fff; font-size: 0.8rem; font-weight: 600; padding: 8px 18px; border-radius: 100px; }
 
     /* ── HERO ── */
-    .hero { background: var(--white); padding: 96px 48px 80px; text-align: center; border-bottom: 1px solid var(--border); }
+    .hero { background: var(--page-bg); padding: 96px 48px 80px; text-align: center; border-bottom: 1px solid var(--border); }
     .hero-tag {
       display: inline-flex; align-items: center; gap: 8px;
       background: var(--lav-bg); color: var(--lavender);
@@ -69,15 +70,22 @@
       letter-spacing: -0.03em; line-height: 1.1; color: var(--text);
       max-width: 780px; margin: 0 auto 24px;
     }
-    .hero h1 em { font-style: normal; color: var(--lavender); font-weight: 300; }
+    .hero h1 em {
+      font-style: normal;
+      font-weight: 800;
+      background: linear-gradient(135deg, #f472b6, #948EC4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
     .hero p { font-size: 1.1rem; color: var(--muted); max-width: 540px; margin: 0 auto 44px; line-height: 1.75; }
     .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
     .btn-green {
-      background: var(--charcoal); color: #fff; font-weight: 600; font-size: 0.92rem;
+      background: linear-gradient(135deg, #f472b6, #948EC4); color: #fff; font-weight: 600; font-size: 0.92rem;
       padding: 14px 30px; border-radius: 100px; text-decoration: none;
-      transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+      transition: opacity 0.15s, transform 0.15s, box-shadow 0.15s;
     }
-    .btn-green:hover { background: #333; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.18); }
+    .btn-green:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.18); }
     .btn-outline {
       background: transparent; color: var(--text); font-weight: 500; font-size: 0.92rem;
       padding: 14px 30px; border-radius: 100px; text-decoration: none;
@@ -93,7 +101,7 @@
 
     /* ── SECTIONS ── */
     .section { padding: 96px 48px; }
-    .section.alt { background: var(--off); }
+    .section.alt { background: #e8e8f2; }
     .container { max-width: 1080px; margin: 0 auto; }
     .section-eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lavender); margin-bottom: 12px; }
     .section-heading { font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.15; color: var(--text); margin-bottom: 14px; }
@@ -101,7 +109,7 @@
 
     /* ── WHY GRID ── */
     .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 52px; }
-    .why-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 32px 28px; transition: box-shadow 0.2s, border-color 0.2s; }
+    .why-card { background: #ffffff; border: 1px solid var(--border); border-radius: 20px; padding: 32px 28px; transition: box-shadow 0.2s, border-color 0.2s; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
     .why-card:hover { border-color: var(--green-m); box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
     .why-icon { width: 44px; height: 44px; background: var(--lav-bg); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 16px; }
     .why-card h3 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
@@ -113,6 +121,7 @@
       overflow: hidden; margin-bottom: 32px;
       display: grid; grid-template-columns: 460px 1fr; min-height: 540px;
       transition: box-shadow 0.2s;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
     }
     .product-card:hover { box-shadow: 0 8px 40px rgba(0,0,0,0.08); }
     .product-card.flip { grid-template-columns: 1fr 460px; }
@@ -236,7 +245,7 @@
     }
 
     /* ── PRICING SECTION ── */
-    .pricing-section { background: var(--off); padding: 96px 48px; }
+    .pricing-section { background: #e8e8f2; padding: 96px 48px; }
     .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
 
     .pricing-card {
@@ -244,6 +253,7 @@
       padding: 40px 32px; display: flex; flex-direction: column;
       transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
       position: relative;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
     }
     .pricing-card:hover { box-shadow: 0 8px 40px rgba(0,0,0,0.09); transform: translateY(-3px); }
     .pricing-card.featured { border-color: var(--charcoal); }
@@ -277,14 +287,15 @@
     .plan-features li .check svg { width: 10px; height: 10px; stroke: var(--green); stroke-width: 2.5; fill: none; }
 
     .plan-cta {
-      display: block; text-align: center; background: var(--off); color: var(--text);
+      display: block; text-align: center;
+      background: linear-gradient(135deg, #f472b6, #948EC4); color: #fff;
       font-weight: 600; font-size: 0.9rem; padding: 14px; border-radius: 100px;
-      text-decoration: none; border: 1.5px solid var(--border2);
-      transition: background 0.15s, border-color 0.15s;
+      text-decoration: none; border: none;
+      transition: opacity 0.15s;
     }
-    .plan-cta:hover { background: var(--off2); border-color: var(--text2); }
-    .pricing-card.featured .plan-cta { background: var(--charcoal); color: #fff; border-color: var(--charcoal); }
-    .pricing-card.featured .plan-cta:hover { background: #333; }
+    .plan-cta:hover { opacity: 0.9; }
+    .pricing-card.featured .plan-cta { background: var(--charcoal); color: #fff; }
+    .pricing-card.featured .plan-cta:hover { opacity: 0.85; }
 
     /* ── STEPS ── */
     .steps-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 56px; position: relative; }
@@ -529,28 +540,28 @@
         Every medication is prepared in a state-licensed pharmacy, independently verified in FDA- and DEA-registered labs, and delivered to your door exactly when you need it.
       </p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:760px;margin:0 auto 44px;">
-        <div style="background:#f7f8f6;border:1px solid #e5e5e5;border-radius:16px;padding:28px 24px;text-align:left;">
+        <div style="background:#ffffff;border:1px solid #e5e5e5;border-radius:16px;padding:28px 24px;text-align:left;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
             <span style="font-weight:700;font-size:0.95rem;color:var(--text);">Potency test</span>
             <span style="background:#edf7f1;color:#219653;font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:100px;white-space:nowrap;">● Passed</span>
           </div>
           <p style="font-size:0.85rem;color:var(--muted);line-height:1.6;">Confirmed every 3–6 months to stay within ± 10% of the target strength.</p>
         </div>
-        <div style="background:#f7f8f6;border:1px solid #e5e5e5;border-radius:16px;padding:28px 24px;text-align:left;">
+        <div style="background:#ffffff;border:1px solid #e5e5e5;border-radius:16px;padding:28px 24px;text-align:left;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
             <span style="font-weight:700;font-size:0.95rem;color:var(--text);">Sterility test</span>
             <span style="background:#edf7f1;color:#219653;font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:100px;white-space:nowrap;">● Passed</span>
           </div>
           <p style="font-size:0.85rem;color:var(--muted);line-height:1.6;">Screened for bacteria, fungi, and other contaminants to meet USP 797 standards.</p>
         </div>
-        <div style="background:#f7f8f6;border:1px solid #e5e5e5;border-radius:16px;padding:28px 24px;text-align:left;">
+        <div style="background:#ffffff;border:1px solid #e5e5e5;border-radius:16px;padding:28px 24px;text-align:left;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
             <span style="font-weight:700;font-size:0.95rem;color:var(--text);">Endotoxicity test</span>
             <span style="background:#edf7f1;color:#219653;font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:100px;white-space:nowrap;">● Passed</span>
           </div>
           <p style="font-size:0.85rem;color:var(--muted);line-height:1.6;">Checked to USP 85 limits to ensure zero harmful bacterial toxins.</p>
         </div>
-        <div style="background:#f7f8f6;border:1px solid #e5e5e5;border-radius:16px;padding:28px 24px;text-align:left;">
+        <div style="background:#ffffff;border:1px solid #e5e5e5;border-radius:16px;padding:28px 24px;text-align:left;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
             <span style="font-weight:700;font-size:0.95rem;color:var(--text);">pH test</span>
             <span style="background:#edf7f1;color:#219653;font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:100px;white-space:nowrap;">● Passed</span>
